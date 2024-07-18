@@ -1,0 +1,38 @@
+module.exports = [
+  {
+    id: 1,
+    title: "Very Solid!!",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    author: "Rashed Kabir",
+    location: "Claifornia",
+    image: "/images/media/img_54.jpg",
+  },
+  {
+    id: 2,
+    title: "Very Solid!!",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    author: "Rashed Kabir",
+    location: "Claifornia",
+    image: "/images/media/img_55.jpg",
+  },
+  {
+    id: 3,
+    title: "Very Solid!!",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    author: "Rashed Kabir",
+    location: "Claifornia",
+    image: "/images/media/img_54.jpg",
+  },
+  {
+    id: 4,
+    title: "Very Solid!!",
+    rating: 5,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    author: "Rashed Kabir",
+    location: "Claifornia",
+    image: "/images/media/img_55.jpg",
+  },
+];
