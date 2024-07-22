@@ -6,8 +6,12 @@ import "aos/dist/aos.css";
 import "../styles/index.scss";
 import ScrollToTop from "@/components/common/ScrollTop";
 
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+
 if (typeof window !== "undefined") {
-  require("bootstrap/dist/js/bootstrap");
+  import("bootstrap/dist/js/bootstrap");
 }
 
 export default function RootLayout({ children }) {
@@ -19,10 +23,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="main-page-wrapper">
-          {children}
-          <ScrollToTop />
-        </div>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <div className="main-page-wrapper">
+              {children}
+              <ScrollToTop />
+            </div>
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

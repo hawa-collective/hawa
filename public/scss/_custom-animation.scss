@@ -140,6 +140,40 @@
   100% {opacity: 0.2;}
 }
 
+/* CSS Fade-in Entry Animation */
+@-webkit-keyframes fade-in-entry {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fade-in-entry {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.fade-in-entry {
+  -webkit-animation: fade-in-entry 1s ease-in-out;
+  animation: fade-in-entry 1s ease-in-out;
+}
+
+/* Example usage */
+.element-to-fade-in-entry {
+  opacity: 0; /* Ensure the element is initially hidden */
+}
+
+.element-to-fade-in-entry.fade-in-entry {
+  opacity: 1; /* Fade-in to fully visible */
+}
+
+
 @keyframes hvr-ripple-out {
   0% {
     top: -5px;

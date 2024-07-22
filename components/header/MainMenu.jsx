@@ -170,7 +170,7 @@ const MainMenu = () => {
               //     ? "nav-link dropdown-toggle active-menu"
               //     : "nav-link dropdown-toggle"
               // }
-              href="#our-story"
+              href="/pages-menu/about-us-v1"
             >
               Our Story
             </a>

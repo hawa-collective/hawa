@@ -1,4 +1,4 @@
-import HawaCollective from "./home/agency-modern/page";
+import HawaCollective from "./home/hawa/page";
 export const metadata = {
   title: "The Hawa Collective",
 };

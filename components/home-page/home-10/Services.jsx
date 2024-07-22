@@ -34,8 +34,8 @@ const servicesData = [
 const Services = () => {
   return (
     <>
-      <div className="title-style-one text-center text-lg-start" data-aos="fade-right" style={{ display: "flex", justifyContent: "center" }}>
-        <h2 className="main-title fw-bold tx-dark">
+      <div className="title-style-one text-lg-start" data-aos="fade-right">
+        <h2 className="main-title fw-bold tx-dark text-center">
           How does it <span>work</span>?
         </h2>
       </div>
@@ -43,11 +43,11 @@ const Services = () => {
       {servicesData.map((service, index) => (
         <div
           key={index}
-          className={`col-lg-4 col-sm-6 p-15`}
+          className={`col-lg-4 col-sm-6 flex-col-center`}
           data-aos="fade-up"
           data-aos-delay={`${index * 100}`}
         >
-          <div className="card-style-one pe-xxl-5 position-relative mt-40 px-3">
+          <div className="card-style-one position-relative mt-40 px-3 pe-5 sm-p0 flex-col-center">
             <div
               className="icon d-flex align-items-center justify-content-center"
               style={{ backgroundColor: service.bgColor }}
@@ -55,12 +55,6 @@ const Services = () => {
               <img src={service.iconSrc} alt="icon" className="lazy-img animate_jumpfour" />
             </div>
             <h5 className="fw-500 mt-35 mb-25">
-              {/* <Link
-                href="/pages-menu/service-details"
-                className="tran3s tx-dark"
-              >
-                {service.title}
-              </Link> */}
               <span
                 href="/pages-menu/service-details"
                 className="tran3s tx-dark card_link_font font_futurabook"
@@ -68,7 +62,7 @@ const Services = () => {
                 {service.title}
               </span>
             </h5>
-            <p className="mb-25 text-lg">{service.description}</p>
+            <p className="mb-25 text-lg text-center">{service.description}</p>
             {/* <Link href="/pages-menu/service-details">
               <img
                 src="/images/icon/icon_05.svg"

@@ -12,9 +12,103 @@
 
 
 ==========================================================================================*/
+.background-light {
+  background-color: #ffffff !important;
+}
+.background-light:focus {
+  border-color: red !important;
+}
+.background-light p {
+  color: #000000 !important;
+  font-size: 16px !important;
+}
+.border-light {
+  border: 1px solid #f0f2ef !important;
+  border-radius: 10px;
+}
+// Removes the border in the location input field
+.mui-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+// Increases width of survey progress bar
+.mui-19hbg91-MuiLinearProgress-root-MuiMobileStepper-progress {
+  width: 100% !important;
+}
+// Makes text lowercase
+.lowercase {
+  text-transform: lowercase !important;
+}
+// Makes text appear as typed
+.text-initial {
+  text-transform: initial !important;
+}
+// Aligns items in start position using flex col
+.flex-start-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+// Flex Column Centering
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+// Aligns items in center using flex row
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+// Hides Stepper Lines
+// .mui-m5vj9m-MuiStepper-root {
+//   display: none !important;
+// }
+
+// Letter Spacing Styles
+.letter-spacing-1 {
+  letter-spacing: 0.01em;
+}
+.letter-spacing-2 {
+  letter-spacing: 0.02em;
+}
+.letter-spacing-3 {
+  letter-spacing: 0.03em;
+}
+.letter-spacing-4 {
+  letter-spacing: 0.04em;
+}
+.letter-spacing-5 {
+  letter-spacing: 0.05em;
+}
+.letter-spacing-6 {
+  letter-spacing: 0.06em;
+}
+.letter-spacing-7 {
+  letter-spacing: 0.07em;
+}
+.letter-spacing-8 {
+  letter-spacing: 0.08em;
+}
+.letter-spacing-9 {
+  letter-spacing: 0.09em;
+}
+.letter-spacing-10 {
+  letter-spacing: 0.1em;
+}
 .foooter-copyright {
   font-size: 13px;
-  text-transform: uppercase;
+  text-transform: initial;
+}
+.foooter-insight {
+  font-size: 12px;
+  text-transform: initial;
 }
 .button-primary {
   text-transform: uppercase;
@@ -156,25 +250,46 @@
   font-size: 35px;
   line-height: 30px;
 }
-.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+.ctn-preloader
+  .animation-preloader
+  .txt-loading
+  .letters-loading:nth-child(2):before {
   animation-delay: 0.2s;
 }
-.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+.ctn-preloader
+  .animation-preloader
+  .txt-loading
+  .letters-loading:nth-child(3):before {
   animation-delay: 0.4s;
 }
-.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+.ctn-preloader
+  .animation-preloader
+  .txt-loading
+  .letters-loading:nth-child(4):before {
   animation-delay: 0.6s;
 }
-.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+.ctn-preloader
+  .animation-preloader
+  .txt-loading
+  .letters-loading:nth-child(5):before {
   animation-delay: 0.8s;
 }
-.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+.ctn-preloader
+  .animation-preloader
+  .txt-loading
+  .letters-loading:nth-child(6):before {
   animation-delay: 1s;
 }
-.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+.ctn-preloader
+  .animation-preloader
+  .txt-loading
+  .letters-loading:nth-child(7):before {
   animation-delay: 1.2s;
 }
-.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+.ctn-preloader
+  .animation-preloader
+  .txt-loading
+  .letters-loading:nth-child(8):before {
   animation-delay: 1.4s;
 }
 .loaded .animation-preloader {
@@ -324,7 +439,7 @@ p {
 .font-lemon-yellow {
   font-family: "dk_lemon_yellow_sunregular", sans-serif;
 }
-.jost {
+.font-jost {
   font-family: "jostregular", sans-serif;
 }
 .card_link_font {
@@ -427,7 +542,11 @@ p {
   height: 10px;
   width: 90%;
   opacity: 1;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
 }
 /*^^^^^^^^^^^^^^^^^^^^ Section Title ^^^^^^^^^^^^^^^^^^^^^^*/
 .title-style-one .sc-title {
@@ -998,8 +1117,7 @@ body .btn-seventeen:before {
   border-radius: 7px;
   border: 2px solid transparent;
   background: linear-gradient(0deg, #fe3b7d, #ff66c9) border-box;
-  -webkit-mask: /*4*/
-    linear-gradient(#fff 0 0) padding-box,
+  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -4483,7 +4601,11 @@ body .btn-twentySix:hover:after {
   right: 0;
   bottom: 0;
   height: 60%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.586528) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0001) 0%,
+    rgba(0, 0, 0, 0.586528) 100%
+  );
 }
 .card-style-eight .img-meta .donation-goal {
   left: 20px;
@@ -4608,7 +4730,11 @@ body .btn-twentySix:hover:after {
   right: 0;
   bottom: 0;
   height: 34%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
 }
 .team-block-one .img-meta .info {
   left: 0;
@@ -6065,9 +6191,13 @@ body .btn-twentySix:hover:after {
   height: 100%;
   border-radius: 30px;
   border: 1px solid transparent;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0)) border-box;
-  -webkit-mask: /*4*/
-    linear-gradient(#fff 0 0) padding-box,
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0)
+    )
+    border-box;
+  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -6118,7 +6248,11 @@ body .btn-twentySix:hover:after {
   letter-spacing: -0.2px;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 35px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.053) 0.94%, rgba(255, 255, 255, 0.019) 98.3%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.053) 0.94%,
+    rgba(255, 255, 255, 0.019) 98.3%
+  );
   border-radius: 10px;
   overflow: hidden;
   z-index: 1;
@@ -6369,8 +6503,7 @@ body .btn-twentySix:hover:after {
   border-radius: 5px;
   border: 2px solid transparent;
   background: linear-gradient(0deg, #fe3b7d, #ff66c9) border-box;
-  -webkit-mask: /*4*/
-    linear-gradient(#fff 0 0) padding-box,
+  -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -7592,7 +7725,11 @@ body .btn-twentySix:hover:after {
   height: 40%;
   z-index: 1;
   padding: 15px 5px 40px 50px;
-  background: linear-gradient(180deg, rgba(14, 14, 14, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(14, 14, 14, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
 }
 .portfolio-block-two.full-width .img-holder .caption {
   padding: 15px 5px 20px 30px;
@@ -8671,7 +8808,11 @@ body .btn-twentySix:hover:after {
 .blog-meta-six:before {
   content: "";
   position: absolute;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.56) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.56) 100%
+  );
   width: 100%;
   height: 100%;
   top: 0;
@@ -9332,7 +9473,11 @@ body .btn-twentySix:hover:after {
   height: 40%;
   z-index: 1;
   padding: 15px 5px 40px 30px;
-  background: linear-gradient(180deg, rgba(14, 14, 14, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(14, 14, 14, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
   opacity: 0;
 }
 .portfolio-block-six .img-meta .caption .tag {
@@ -9444,7 +9589,11 @@ body .btn-twentySix:hover:after {
   height: 32%;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
   transform: rotate(-180deg);
   z-index: -1;
 }
@@ -9455,7 +9604,11 @@ body .btn-twentySix:hover:after {
   height: 58%;
   bottom: 0;
   left: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
   z-index: -1;
 }
 .inner-banner-two .title {
@@ -10042,7 +10195,10 @@ body .btn-twentySix:hover:after {
   top: 3px;
   transition: all 0.1s ease-in-out;
 }
-.user-data-section .agreement-checkbox input[type="checkbox"]:checked + label:before {
+.user-data-section
+  .agreement-checkbox
+  input[type="checkbox"]:checked
+  + label:before {
   content: "\f272";
   font-family: bootstrap-icons !important;
   background: #000;
