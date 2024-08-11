@@ -1,8 +1,9 @@
 // stepper/page.jsx
 
-'use client';
+"use client";
 
-import React from "react";
+import React, { useState, Fragment } from "react";
+import Link from "next/link";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -10,29 +11,33 @@ import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import { useTheme } from '@mui/material/styles';
-import MobileStepper from '@mui/material/MobileStepper';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-
+import { useTheme } from "@mui/material/styles";
+import MobileStepper from "@mui/material/MobileStepper";
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
 import Steps from "./steps/steps";
 
-const steps = [
-  "Your location & age",
-  "Select your age",
-  "Heaviness of flow",
-  "Period Type",
-  "Type of product",
-  "Brand name",
-  "Brand comfort",
-];
+// const steps = [
+//   "Your location & age",
+//   "Select your age",
+//   "Heaviness of flow",
+//   "Period Type",
+//   "Type of product",
+//   "Brand name",
+//   "Brand comfort",
+// ];
+const steps = 10;
 
 export default function HorizontalLinearStepper() {
   const theme = useTheme();
 
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [skipped, setSkipped] = React.useState(new Set());
+  const [activeStep, setActiveStep] = useState(1);
+  const [skipped, setSkipped] = useState(new Set());
+  const [stepStatus, setStepStatus] = useState("introduction");
+  const [productType, setProductType] = useState("");
+
+  const [Brand, setBrand] = useState(null);
 
   const isStepOptional = (step) => {
     return step === null;
@@ -52,12 +57,47 @@ export default function HorizontalLinearStepper() {
   //   setActiveStep((prevActiveStep) => prevActiveStep + 1);
   //   setSkipped(newSkipped);
   // };
-  const handleNext = () => {
+  const handleNext = (nextStatus) => {
+    console.log("HANDLE NEXT CLICKED!");
+    console.log("STATUS: ", nextStatus);
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setStepStatus(nextStatus);
   };
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    switch (stepStatus) {
+      case "location":
+        setStepStatus("introduction");
+        break;
+      case "age":
+        setStepStatus("location");
+        break;
+      case "flow":
+        setStepStatus("age");
+        break;
+      case "period":
+        setStepStatus("flow");
+        break;
+      case "type":
+        setStepStatus("period");
+        break;
+      case "rating":
+        setStepStatus("specific");
+        break;
+      case "specific":
+        setStepStatus("type");
+        break;
+      case "heaviest":
+        setStepStatus("rating");
+        break;
+      case "extra":
+        setStepStatus("heaviest");
+        break;
+      default:
+        setStepStatus("introduction");
+        break;
+    }
   };
 
   const handleSkip = () => {
@@ -76,19 +116,35 @@ export default function HorizontalLinearStepper() {
   };
 
   const percentProgress = (progress, steps) => {
-    const progressPercentage = (progress / steps.length) * 100
+    const progressPercentage = (progress / steps) * 100;
     while (progressPercentage <= 100) {
       return Math.trunc(progressPercentage);
     }
     // return Math.trunc(progressPercentage);
-  }
+  };
 
   const handleReset = () => {
     setActiveStep(0);
+    setStepStatus("introduction");
+    setProductType("");
   };
 
+  const ProductTypeSelect = (productType) => {
+    console.log("Product Type:", productType);
+    setProductType(productType);
+    setStepStatus("specific");
+    sessionStorage.setItem("product type", productType);
+  };
   return (
-    <Box sx={{ width: "100%" }}  className="fade-in-entry flex-col-center">
+    <Box sx={{ width: "100%" }} className="fade-in-entry flex-col-center">
+      {/* <div className="inner-content position-relative">
+        <div className="logo order-lg-0">
+          <Link href="/" className="d-block">
+            <img src="/images/logo/hawalogo.png" alt="" width={75} />
+          </Link>
+        </div>
+      </div> */}
+      {/* /.inner-content */}
       {/* <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps = {};
@@ -108,35 +164,51 @@ export default function HorizontalLinearStepper() {
           );
         })}
       </Stepper> */}
-      <MobileStepper
-       style={{ width: "100%" }}
-      variant="progress"
-      steps={steps.length}
-      position="static"
-      activeStep={activeStep}
-      sx={{ maxWidth: 400, flexGrow: 1 }}
-      nextButton={
-        <Button size="large">
-          {percentProgress((activeStep), steps)}%
-          {theme.direction === 'rtl' ? (
-            <KeyboardArrowLeft style={{ fontSize: "50px", color: "#000000" }} />
-          ) : (
-            <KeyboardArrowRight style={{ display: "none" }} />
-          )}
-        </Button>
-      }
-      backButton={
-        <Button size="large" onClick={handleBack} disabled={activeStep === 0}>
-          {theme.direction === 'rtl' ? (
-            <KeyboardArrowRight style={{ fontSize: "50px", color: "#000000" }} />
-          ) : (
-            <KeyboardArrowLeft style={{ fontSize: "50px", color: "#000000" }} />
-          )}
-        </Button>
-      }
-    />
-      {activeStep === steps.length ? (
-        <React.Fragment>
+      {stepStatus !== "introduction" && stepStatus !== "finish" ? (
+        <MobileStepper
+          style={{ width: "100%" }}
+          className={activeStep === 0 ? `hide-all` : ``}
+          variant="progress"
+          steps={steps}
+          position="static"
+          activeStep={activeStep - 1}
+          sx={{ maxWidth: 400, flexGrow: 1 }}
+          nextButton={
+            <Button size="large">
+              <span className="fs-27 font-lemon-yellow">
+                {percentProgress(activeStep, steps)}%
+              </span>
+              {theme.direction === "rtl" ? (
+                <KeyboardArrowLeft
+                  style={{ fontSize: "50px", color: "#000000" }}
+                />
+              ) : (
+                <KeyboardArrowRight style={{ display: "none" }} />
+              )}
+            </Button>
+          }
+          backButton={
+            <Button
+              size="large"
+              onClick={handleBack}
+              disabled={activeStep === 0}
+            >
+              {theme.direction === "rtl" ? (
+                <KeyboardArrowRight
+                  style={{ fontSize: "50px", color: "#000000" }}
+                />
+              ) : (
+                <KeyboardArrowLeft
+                  style={{ fontSize: "50px", color: "#000000" }}
+                />
+              )}
+            </Button>
+          }
+        />
+      ) : null}
+
+      {stepStatus === "finish" ? (
+        <Fragment>
           <Typography sx={{ mt: 2, mb: 1 }}>
             All steps completed - you&apos;re finished
           </Typography>
@@ -144,15 +216,26 @@ export default function HorizontalLinearStepper() {
             <Box sx={{ flex: "1 1 auto" }} />
             <Button onClick={handleReset}>Reset</Button>
           </Box>
-        </React.Fragment>
+        </Fragment>
       ) : (
         <>
-          <div className="flex-col-center">
+          <div className="flex-col-center" style={{ minHeight: "350px" }}>
             <div>
-              <Steps activeStep={activeStep + 1} handleNext={handleNext} />
+              <Steps
+                stepStatus={stepStatus}
+                ProductTypeSelect={ProductTypeSelect}
+                setProductType={setProductType}
+                productType={productType}
+                activeStep={activeStep}
+                Brand={Brand}
+                setBrand={setBrand}
+                handleBack={handleBack}
+                handleNext={handleNext}
+              />
             </div>
-            <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+            {/* <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
               <Button
+                className={activeStep === 0 ? `hide-all` : ``}
                 color="inherit"
                 disabled={activeStep === 0}
                 onClick={handleBack}
@@ -167,10 +250,13 @@ export default function HorizontalLinearStepper() {
                 </Button>
               )}
 
-              <Button onClick={handleNext}>
+              <Button
+                onClick={handleNext}
+                className={activeStep === 0 ? `hide-all` : ``}
+              >
                 {activeStep === steps.length - 1 ? "Finish" : "Next"}
               </Button>
-            </Box>
+            </Box> */}
           </div>
         </>
       )}

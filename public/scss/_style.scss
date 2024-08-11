@@ -12,6 +12,38 @@
 
 
 ==========================================================================================*/
+.text-left {
+  text-align: left !important;
+}
+// Card border
+.floating-card {
+  background-color: white !important;
+  border: 1px solid #600c00 !important;
+  border-radius: 3px !important; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+              0 6px 20px rgba(0, 0, 0, 0.1) !important; /* Dark shadow with a gentle glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Smooth hover effect */
+}
+
+.floating-card:active {
+  transform: translateY(-5px) !important; /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
+              0 12px 40px rgba(0, 0, 0, 0.2) !important; /* Enhanced shadow on hover */
+}
+.floating-card:focus {
+  border: 1px solid #600c00 !important;
+}
+
+
+.selected-card {
+  border: 1px solid #600c00 !important;
+  border-radius: 7px !important;
+  box-shadow: 1px 1px 1px #600c00 !important;
+}
+// Changes the Brand name input text to left aligned
+.mui-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.mui-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.mui-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input {
+  text-align: left !important;
+}
 .background-light {
   background-color: #ffffff !important;
 }
@@ -41,6 +73,20 @@
 // Makes text appear as typed
 .text-initial {
   text-transform: initial !important;
+}
+.flex-col-sp-around {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+}
+.flex-col-sp-between {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
 }
 // Aligns items in start position using flex col
 .flex-start-col {
@@ -176,16 +222,16 @@
 :root {
   --text-color: #48494e;
   --heading: #090f32;
-  --prime-one: #f51720;
-  --prime-two: #f51720;
+  --prime-one: #600c00;
+  --prime-two: #600c00;
   --prime-three: #6a45ff;
   --prime-four: #ffcd45;
   --prime-five: #007bff;
   --prime-six: #ffd338;
   --prime-seven: linear-gradient(-90deg, #ff7df2 0%, #ff275b 100%);
   --prime-eight: #ffed4e;
-  --prime-nine: #f51720;
-  --prime-ten: #f51720;
+  --prime-nine: #600c00;
+  --prime-ten: #600c00;
   --prime-eleven: #ffce4c;
   --prime-twelve: #ffe500;
 }
@@ -423,6 +469,18 @@ p {
 }
 .fs-20 {
   font-size: 20px;
+}
+.fs-21 {
+  font-size: 21px;
+}
+.fs-23 {
+  font-size: 23px;
+}
+.fs-27 {
+  font-size: 27px;
+}
+.fs-30 {
+  font-size: 30px;
 }
 .fw-500 {
   font-weight: 500;

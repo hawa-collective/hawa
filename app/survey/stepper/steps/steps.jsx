@@ -1,41 +1,106 @@
-// steps/steps.jsx
+import React from "react";
+import Introduction from "./introduction/introduction";
+import Location from "./location/Location";
+import Age from "./Age/Age";
+import Flow from "./FlowType/Flow";
+import Period from "./Period/Period";
+import ProductType from "./product-type/ProductType";
+import BrandType from "./brand-type/BrandType";
+import PadsTamponsUndies from "./PadsTamponsUndies/PadsTamponsUndies";
+import CupAndDisk from "./CupAndDisk/CupAndDisk";
+import RateProduct from "./RateProduct/RateProduct";
+import HeaviestPads from "./HeaviestPads/HeaviestPads";
+import HeaviestCups from "./HeaviestCups/HeaviestCups";
+import Extra from "./Extra/Extra";
 
-'use client';
+function Steps({
+  stepStatus,
+  ProductTypeSelect,
+  setProductType,
+  productType,
+  activeStep,
+  Brand,
+  setBrand,
+  handleBack,
+  handleNext,
+}) {
+  const rendersteps = (stepStatus, productType) => {
+    console.log("Step Status:", stepStatus, "\n", "Product Type:", productType);
 
-import React from 'react';
-import FirstStep from './firstStep/firstStep';
-import SecondStep from './secondStep/secondStep';
-import ThirdStep from './thirdStep/thirdStep';
-import FourthStep from './fourthStep/fourthStep';
-
-function Steps({ activeStep, handleNext }) {
-    const renderActiveStep = (step) => {
-        console.log("Rendering step:", step);
-        switch (step) {
-            case 1:
-                return <FirstStep step={step} />;
-            case 2:
-                return <SecondStep step={step} handleNext={handleNext} />;
-            case 3:
-                return <ThirdStep step={step} />;
-            case 4:
-                return <FourthStep />;
-            // case 5:
-            //     return <FifthStep />;
-            // case 6:
-            //     return <SixthStep />;
-            // case 7:
-            //     return <SeventhStep />;
-            default:
-                return <div>Unknown step</div>;
+    switch (stepStatus) {
+      case "introduction":
+        return <Introduction handleNext={handleNext} />;
+      case "location":
+        return <Location handleNext={handleNext} />;
+      case "age":
+        return <Age handleNext={handleNext} />;
+      case "flow":
+        return <Flow handleNext={handleNext} />;
+      case "period":
+        return <Period handleNext={handleNext} />;
+      case "type":
+        return (
+          <ProductType
+            ProductTypeSelect={ProductTypeSelect}
+            setProductType={setProductType}
+            productType={productType}
+            Brand={Brand}
+            handleNext={handleNext}
+          />
+        );
+      case "specific":
+        if (
+          productType === "tampon" ||
+          productType === "pad" ||
+          productType === "underwear"
+        ) {
+          return (
+            <PadsTamponsUndies
+              Brand={Brand}
+              setBrand={setBrand}
+              handleNext={handleNext}
+            />
+          );
         }
-    };
+        return (
+          <CupAndDisk
+            Brand={Brand}
+            setBrand={setBrand}
+            handleNext={handleNext}
+          />
+        );
+      case "rating":
+        return (
+          <RateProduct
+            productType={productType}
+            setProductType={setProductType}
+            Brand={Brand}
+            handleNext={handleNext}
+          />
+        );
+      case "heaviest":
+        if (
+          productType === "tampon" ||
+          productType === "pad" ||
+          productType === "underwear"
+        ) {
+          return (
+            <HeaviestPads productType={productType} handleNext={handleNext} />
+          );
+        }
+        return (
+          <HeaviestCups productType={productType} handleNext={handleNext} />
+        );
+      case "extra":
+        return (
+          <Extra Brand={Brand} setBrand={setBrand} handleNext={handleNext} />
+        );
+      default:
+        return <div>Unknown step !!!!</div>;
+    }
+  };
 
-    return (
-        <div>
-            {renderActiveStep(activeStep)}
-        </div>
-    );
+  return <div>{rendersteps(stepStatus, productType)}</div>;
 }
 
 export default Steps;

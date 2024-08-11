@@ -19,7 +19,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#f51720"
+      main: "#600c00"
     }
   },
   shadows: ["none", "0px 1px 3px rgba(0, 0, 0, 0.2)", "0px 1px 5px rgba(0, 0, 0, 0.2)"]

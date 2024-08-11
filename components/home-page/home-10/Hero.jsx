@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="pr-info fw-500 fs-20 tx-dark mt-35">
             Over{" "}
             <span className="fw-bold text-decoration-underline font-lemon-yellow">
-              200+
+              50+
             </span>
             {" "}rated sanitary products in Kenya.
           </div>
