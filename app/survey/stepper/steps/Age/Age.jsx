@@ -60,7 +60,7 @@ export default function Age({ handleNext }) {
         onClick={() => handleNext("flow")}
         style={{ backgroundColor: "#000000" }}
       >
-        Next
+        CONTINUE
       </button>
     </div>
   );

@@ -97,7 +97,7 @@ export default function Location({ handleNext }) {
         onClick={() => handleNext("age")}
         style={{ backgroundColor: "#000000" }}
       >
-        Next
+        CONTINUE
       </button>
     </div>
   );
