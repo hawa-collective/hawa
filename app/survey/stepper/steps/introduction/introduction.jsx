@@ -59,7 +59,7 @@ export default function Introduction({ handleNext }) {
             component="div"
             className="m-0 me-1"
           >
-            Hi Karl!
+            Hey You!
           </Typography>
           <div className="ms-1">
             <Image
