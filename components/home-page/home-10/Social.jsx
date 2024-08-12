@@ -1,12 +1,12 @@
 const socialIcons = [
   {
-    iconClass: "fab fa-facebook-f",
-    link: "#",
+    iconClass: "fab fa-instagram",
+    link: "https://www.instagram.com/hawacollective/",
   },
-  {
-    iconClass: "fab fa-twitter",
-    link: "#",
-  },
+  // {
+  //   iconClass: "fab fa-twitter",
+  //   link: "#",
+  // },
   {
     iconClass: "fab fa-linkedin-in",
     link: "#",
