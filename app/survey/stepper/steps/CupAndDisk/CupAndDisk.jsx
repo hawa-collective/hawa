@@ -69,7 +69,7 @@ export default function CupAndDisk({ Brand, setBrand, handleNext }) {
         >
           Choose the brand you love most.
         </span>
-        <p>Type in the brand you use or "other" if it does not exist.</p>
+        <p style={{ fontSize: "14px" }}>Type in the brand you use or "other" if it does not exist.</p>
         <div className="height-15"></div>
         <Autocomplete
           style={{ boxShadow: "1px 1px #a5a5a5", borderRadius: "20px" }}
@@ -102,7 +102,7 @@ export default function CupAndDisk({ Brand, setBrand, handleNext }) {
           renderInput={(params) => (
             <TextField
               {...params}
-              label="Pick your Cup or Disk"
+              label="For example 'Diva Cup'"
               error={!!error} // Boolean check to ensure it's true/false
               helperText={error ? "Please type in your preferred brand" : ""}
               inputProps={{
@@ -113,7 +113,7 @@ export default function CupAndDisk({ Brand, setBrand, handleNext }) {
           )}
         />
         {!Brand ? (
-          <span className="mt-3">Please type in your brand to continue</span>
+          <span className="mt-3 warn-text">Please type in your brand to continue</span>
         ) : (
           <button
             className="mt-3 tran3s button-primary ripple-btn fw-500"

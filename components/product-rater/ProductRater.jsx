@@ -59,18 +59,15 @@ export default function ProductRater({
   factorName,
   onRatingChange,
 }) {
-  const [rating, setRating] = useState(3); // Default value
+  const [rating, setRating] = useState(null);
 
   useEffect(() => {
-    // Fetch product type from session storage
     const storedProductType = sessionStorage.getItem("product type");
 
     if (storedProductType !== productType) {
-      // Reset rating to default (3) if product type changes
       setProductType(storedProductType);
-      setRating(3);
+      setRating(null);
     } else {
-      // Retrieve and set the rating from session storage if it exists
       const storedRating = sessionStorage.getItem(factorName);
       if (storedRating) {
         setRating(parseInt(storedRating, 10));
@@ -99,6 +96,8 @@ export default function ProductRater({
 }
 
 ProductRater.propTypes = {
+  productType: PropTypes.string,
+  setProductType: PropTypes.func.isRequired,
   factorName: PropTypes.string.isRequired,
   onRatingChange: PropTypes.func.isRequired,
 };

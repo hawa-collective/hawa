@@ -9,10 +9,11 @@ import Image from "next/image";
 import Button from "@mui/material/Button";
 
 export default function Period({ handleNext }) {
-  const [period, setPeriod] = useState("");
+  const [period, setPeriod] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    // Retrieve the stored flow from sessionStorage when the component mounts
+    // Retrieve the stored period from sessionStorage when the component mounts
     const storedPeriod = sessionStorage.getItem("period");
     if (storedPeriod) {
       setPeriod(storedPeriod);
@@ -22,6 +23,15 @@ export default function Period({ handleNext }) {
   const handlePeriodSelect = (selectedPeriod) => {
     setPeriod(selectedPeriod);
     sessionStorage.setItem("period", selectedPeriod);
+    setError(false); // Clear error when a valid option is selected
+  };
+
+  const handleContinueClick = () => {
+    if (!period) {
+      setError(true); // Show error if no period option is selected
+    } else {
+      handleNext("type");
+    }
   };
 
   return (
@@ -47,13 +57,15 @@ export default function Period({ handleNext }) {
       >
         <Button
           key="regular"
-          className="p-0 flex-col-sp-between"
+          className={`p-0 flex-col-sp-between ${
+            period === "regular" ? "selected-background" : "background-light"
+          }`}
           style={{ width: "100%" }}
           onClick={() => handlePeriodSelect("regular")}
         >
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent className="flex-start-col" sx={{ flex: "1 0 auto" }}>
-              <Typography component="div" variant="h5">
+              <Typography component="div" variant="h5" style={{ textTransform: "initial" }}>
                 Regular
               </Typography>
               <Typography
@@ -69,7 +81,7 @@ export default function Period({ handleNext }) {
           <div className="flex-col-center p-2">
             <Image
               src="/images/media/regular-flow.png"
-              alt="heavy flow icon"
+              alt="regular flow icon"
               width={75}
               height={75}
             />
@@ -89,20 +101,22 @@ export default function Period({ handleNext }) {
       >
         <Button
           key="irregular"
-          className="p-0 flex-col-sp-between"
+          className={`p-0 flex-col-sp-between ${
+            period === "irregular" ? "selected-background" : "background-light"
+          }`}
           style={{ width: "100%" }}
           onClick={() => handlePeriodSelect("irregular")}
         >
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent className="flex-start-col" sx={{ flex: "1 0 auto" }}>
-              <Typography component="div" variant="h5">
+              <Typography component="div" variant="h5" style={{ textTransform: "initial" }}>
                 Irregular
               </Typography>
               <Typography
                 variant="subtitle1"
                 color="text.secondary"
                 component="div"
-                className="lowercase text-initial text-left"
+                className="text-initial"
               >
                 May skip some months
               </Typography>
@@ -111,7 +125,7 @@ export default function Period({ handleNext }) {
           <div className="flex-col-center p-2">
             <Image
               src="/images/media/irregular-flow.png"
-              alt="heavy flow icon"
+              alt="irregular flow icon"
               width={75}
               height={75}
             />
@@ -119,13 +133,17 @@ export default function Period({ handleNext }) {
         </Button>
       </Card>
 
-      <button
+      {period === null ? (
+        <span className="mt-3 warn-text">Please select an option</span>
+      ) : (
+        <button
         className="mt-3 tran3s button-primary ripple-btn fw-500"
         onClick={() => handleNext("type")}
         style={{ backgroundColor: "#000000" }}
       >
         CONTINUE
       </button>
+      )}
     </div>
   );
 }

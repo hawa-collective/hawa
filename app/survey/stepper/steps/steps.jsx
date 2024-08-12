@@ -21,6 +21,8 @@ function Steps({
   activeStep,
   Brand,
   setBrand,
+  ratings,
+  setRatings,
   handleBack,
   handleNext,
 }) {
@@ -75,6 +77,8 @@ function Steps({
             productType={productType}
             setProductType={setProductType}
             Brand={Brand}
+            rating={ratings}
+            setRating={setRatings}
             handleNext={handleNext}
           />
         );

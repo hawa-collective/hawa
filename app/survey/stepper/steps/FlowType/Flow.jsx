@@ -9,7 +9,8 @@ import Image from "next/image";
 import Button from "@mui/material/Button";
 
 export default function Flow({ handleNext }) {
-  const [flow, setFlow] = useState("");
+  const [flow, setFlow] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     // Retrieve the stored flow from sessionStorage when the component mounts
@@ -22,6 +23,15 @@ export default function Flow({ handleNext }) {
   const handleFlowSelect = (selectedFlow) => {
     setFlow(selectedFlow);
     sessionStorage.setItem("flow", selectedFlow);
+    setError(false); // Clear error when a valid option is selected
+  };
+
+  const handleContinueClick = () => {
+    if (!flow) {
+      setError(true); // Show error if no flow option is selected
+    } else {
+      handleNext("period");
+    }
   };
 
   return (
@@ -55,7 +65,7 @@ export default function Flow({ handleNext }) {
         >
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent className="flex-start-col" sx={{ flex: "1 0 auto" }}>
-              <Typography component="div" variant="h5">
+              <Typography component="div" variant="h5" style={{ textTransform: "initial" }}>
                 Yes
               </Typography>
               <Typography
@@ -99,7 +109,7 @@ export default function Flow({ handleNext }) {
         >
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent className="flex-start-col" sx={{ flex: "1 0 auto" }}>
-              <Typography component="div" variant="h5">
+              <Typography component="div" variant="h5" style={{ textTransform: "initial" }}>
                 No
               </Typography>
               <Typography
@@ -123,13 +133,17 @@ export default function Flow({ handleNext }) {
         </Button>
       </Card>
 
-      <button
+      {flow === null ? (
+        <span className="mt-3 warn-text">Please select an option</span>
+      ) : (
+        <button
         className="mt-3 tran3s button-primary ripple-btn fw-500"
         onClick={() => handleNext("period")}
         style={{ backgroundColor: "#000000" }}
       >
         CONTINUE
       </button>
+      )}
     </div>
   );
 }

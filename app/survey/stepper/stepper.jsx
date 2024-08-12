@@ -36,6 +36,7 @@ export default function HorizontalLinearStepper() {
   const [skipped, setSkipped] = useState(new Set());
   const [stepStatus, setStepStatus] = useState("introduction");
   const [productType, setProductType] = useState("");
+  const [ratings, setRatings] = useState(null); // Default value
 
   const [Brand, setBrand] = useState(null);
 
@@ -127,6 +128,17 @@ export default function HorizontalLinearStepper() {
     setActiveStep(0);
     setStepStatus("introduction");
     setProductType("");
+    sessionStorage.removeItem("location");
+    sessionStorage.removeItem("age");
+    sessionStorage.removeItem("flow");
+    sessionStorage.removeItem("period");
+    sessionStorage.removeItem("product type");
+    sessionStorage.removeItem("brand");
+    sessionStorage.removeItem("Affordability");
+    sessionStorage.removeItem("EaseOfUse");
+    sessionStorage.removeItem("Comfort");
+    sessionStorage.removeItem("usage");
+    sessionStorage.removeItem("extra");
   };
 
   const ProductTypeSelect = (productType) => {
@@ -221,6 +233,9 @@ export default function HorizontalLinearStepper() {
         <>
           <div className="flex-col-center" style={{ minHeight: "350px" }}>
             <div>
+              {stepStatus !== "introduction" ? (
+                <Button onClick={handleReset}>Reset</Button>
+              ) : null}
               <Steps
                 stepStatus={stepStatus}
                 ProductTypeSelect={ProductTypeSelect}
@@ -229,6 +244,8 @@ export default function HorizontalLinearStepper() {
                 activeStep={activeStep}
                 Brand={Brand}
                 setBrand={setBrand}
+                rating={ratings}
+                setRating={setRatings}
                 handleBack={handleBack}
                 handleNext={handleNext}
               />

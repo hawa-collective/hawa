@@ -9,6 +9,7 @@ import Image from "next/image";
 
 export default function Location({ handleNext }) {
   const [selectedLocation, setSelectedLocation] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     // Retrieve the stored location from sessionStorage
@@ -24,9 +25,19 @@ export default function Location({ handleNext }) {
 
   const handleLocationChange = (event, value) => {
     if (value) {
-      // Store the selected location in session storage
       sessionStorage.setItem("location", value.label);
-      setSelectedLocation(value); // Set the selected value to state
+      setSelectedLocation(value);
+      setError(false); // Clear the error when a valid location is selected
+    } else {
+      setSelectedLocation(null);
+    }
+  };
+
+  const handleContinueClick = () => {
+    if (!selectedLocation) {
+      setError(true); // Show error if no location is selected
+    } else {
+      handleNext("age");
     }
   };
 
@@ -85,6 +96,8 @@ export default function Location({ handleNext }) {
           <TextField
             {...params}
             label="Choose a country"
+            error={!!error} // Boolean check to ensure it's true/false
+            helperText={error ? "Please select a country" : ""}
             inputProps={{
               ...params.inputProps,
               autoComplete: "new-password", // disable autocomplete and autofill
@@ -92,13 +105,18 @@ export default function Location({ handleNext }) {
           />
         )}
       />
-      <button
-        className="mt-3 tran3s button-primary ripple-btn fw-500"
-        onClick={() => handleNext("age")}
-        style={{ backgroundColor: "#000000" }}
-      >
-        CONTINUE
-      </button>
+      {selectedLocation === null ? (
+        <span className="mt-3 warn-text">Please select a country</span>
+      ) : (
+        <button
+          className="mt-3 tran3s button-primary ripple-btn fw-500"
+          onClick={handleContinueClick}
+          style={{ backgroundColor: "#000000" }}
+          disabled={!selectedLocation} // Disable button if no location is selected
+        >
+          CONTINUE
+        </button>
+      )}
     </div>
   );
 }

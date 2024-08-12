@@ -135,7 +135,11 @@ export default function HeaviestCups({ productType, handleNext }) {
         >
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent className="flex-start-col" sx={{ flex: "1 0 auto" }}>
-              <Typography component="div" variant="h5">
+              <Typography
+                component="div"
+                variant="h5"
+                style={{ textTransform: "initial" }}
+              >
                 More than 4
               </Typography>
               <Typography
@@ -144,7 +148,7 @@ export default function HeaviestCups({ productType, handleNext }) {
                 component="div"
                 className="lowercase text-initial"
               >
-                Umbrellas are useless here
+                This can be a challenge
               </Typography>
             </CardContent>
           </Box>
@@ -158,14 +162,17 @@ export default function HeaviestCups({ productType, handleNext }) {
           </div>
         </Button>
       </Card>
-
-      <button
-        className="mt-3 tran3s button-primary ripple-btn fw-500"
-        onClick={() => handleNext("extra")}
-        style={{ backgroundColor: "#000000" }}
-      >
-        CONTINUE
-      </button>
+      {productUsage === "" ? (
+        <span className="mt-3 warn-text">Please select an option</span>
+      ) : (
+        <button
+          className="mt-3 tran3s button-primary ripple-btn fw-500"
+          onClick={() => handleNext("extra")}
+          style={{ backgroundColor: "#000000" }}
+        >
+          CONTINUE
+        </button>
+      )}
     </div>
   );
 }

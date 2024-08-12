@@ -35,17 +35,17 @@ export default function HeaviestPads({ productType, handleNext }) {
       </span>
       <p>From when you wake up to when you sleep</p>
       <div className="height-15"></div>
-        <Card
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-          }}
-          className={`survey-card my-2 ${
-            productUsage === "1to2" ? "floating-card" : ""
-          }`}
-        >
-          <Button
+      <Card
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+        className={`survey-card my-2 ${
+          productUsage === "1to2" ? "floating-card" : ""
+        }`}
+      >
+        <Button
           key="1to2"
           className="p-0 flex-col-sp-between"
           style={{ width: "100%" }}
@@ -68,14 +68,14 @@ export default function HeaviestPads({ productType, handleNext }) {
           </Box>
           <div className="flex-col-center p-2">
             <Image
-              src="/images/media/happy-face.svg"
+              src="/images/media/smile.png"
               alt="heavy flow icon"
               width={75}
               height={75}
             />
           </div>
-          </Button>
-        </Card>
+        </Button>
+      </Card>
       <Card
         sx={{
           display: "flex",
@@ -109,7 +109,7 @@ export default function HeaviestPads({ productType, handleNext }) {
           </Box>
           <div className="flex-col-center p-2">
             <Image
-              src="/images/media/sad-face.svg"
+              src="/images/media/sad-face.png"
               alt="heavy flow icon"
               width={75}
               height={75}
@@ -135,7 +135,11 @@ export default function HeaviestPads({ productType, handleNext }) {
         >
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent className="flex-start-col" sx={{ flex: "1 0 auto" }}>
-              <Typography component="div" variant="h5">
+              <Typography
+                component="div"
+                variant="h5"
+                style={{ textTransform: "initial" }}
+              >
                 More than 4
               </Typography>
               <Typography
@@ -150,7 +154,7 @@ export default function HeaviestPads({ productType, handleNext }) {
           </Box>
           <div className="flex-col-center p-2">
             <Image
-              src="/images/media/mad-face.svg"
+              src="/images/media/mad-face.png"
               alt="heavy flow icon"
               width={75}
               height={75}
@@ -158,14 +162,17 @@ export default function HeaviestPads({ productType, handleNext }) {
           </div>
         </Button>
       </Card>
-
-      <button
-        className="mt-3 tran3s button-primary ripple-btn fw-500"
-        onClick={() => handleNext("extra")}
-        style={{ backgroundColor: "#000000" }}
-      >
-        CONTINUE
-      </button>
+      {productUsage === "" ? (
+        <span className="mt-3 warn-text">Please select an option</span>
+      ) : (
+        <button
+          className="mt-3 tran3s button-primary ripple-btn fw-500"
+          onClick={() => handleNext("extra")}
+          style={{ backgroundColor: "#000000" }}
+        >
+          CONTINUE
+        </button>
+      )}
     </div>
   );
 }

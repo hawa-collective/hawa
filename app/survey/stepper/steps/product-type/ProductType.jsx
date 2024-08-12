@@ -12,13 +12,23 @@ const ProductType = ({
   productType,
   handleNext,
 }) => {
+  const [error, setError] = useState(false);
+
   useEffect(() => {
-    // Retrieve the stored flow from sessionStorage when the component mounts
+    // Retrieve the stored product type from sessionStorage when the component mounts
     const storedProductType = sessionStorage.getItem("product type");
     if (storedProductType) {
       setProductType(storedProductType);
     }
   }, []);
+
+  const handleContinueClick = () => {
+    if (!productType) {
+      setError(true); // Show error if no product type is selected
+    } else {
+      handleNext("specific");
+    }
+  };
 
   const optionOneTwo = [
     <Button
@@ -28,13 +38,16 @@ const ProductType = ({
         productType === "pad" ? "floating-card" : "border-light"
       }`}
       style={{ width: "177px" }}
-      onClick={(e) => ProductTypeSelect(e.currentTarget.id)}
+      onClick={(e) => {
+        ProductTypeSelect(e.currentTarget.id);
+        setError(false); // Clear error when a valid option is selected
+      }}
     >
       <div className="fade-in-entry flex-col-center">
         <div>
           <Image
             src="/images/media/pad.png"
-            alt="location animated icon"
+            alt="pad icon"
             width={77}
             height={77}
           />
@@ -52,13 +65,16 @@ const ProductType = ({
         productType === "cup" ? "floating-card" : "border-light"
       }`}
       style={{ width: "177px" }}
-      onClick={(e) => ProductTypeSelect(e.currentTarget.id)}
+      onClick={(e) => {
+        ProductTypeSelect(e.currentTarget.id);
+        setError(false); // Clear error when a valid option is selected
+      }}
     >
       <div className="fade-in-entry flex-col-center">
         <div>
           <Image
             src="/images/media/cup.png"
-            alt="location animated icon"
+            alt="cup icon"
             width={77}
             height={77}
           />
@@ -79,13 +95,16 @@ const ProductType = ({
         productType === "tampon" ? "floating-card" : "border-light"
       }`}
       style={{ width: "177px" }}
-      onClick={(e) => ProductTypeSelect(e.currentTarget.id)}
+      onClick={(e) => {
+        ProductTypeSelect(e.currentTarget.id);
+        setError(false); // Clear error when a valid option is selected
+      }}
     >
       <div className="fade-in-entry flex-col-center">
         <div>
           <Image
             src="/images/media/tampon.png"
-            alt="location animated icon"
+            alt="tampon icon"
             width={77}
             height={77}
           />
@@ -103,13 +122,16 @@ const ProductType = ({
         productType === "disk" ? "floating-card" : "border-light"
       }`}
       style={{ width: "177px" }}
-      onClick={(e) => ProductTypeSelect(e.currentTarget.id)}
+      onClick={(e) => {
+        ProductTypeSelect(e.currentTarget.id);
+        setError(false); // Clear error when a valid option is selected
+      }}
     >
       <div className="fade-in-entry flex-col-center">
         <div>
           <Image
             src="/images/media/disk2.png"
-            alt="location animated icon"
+            alt="disk icon"
             width={77}
             height={77}
           />
@@ -157,13 +179,17 @@ const ProductType = ({
           {bottomCards}
         </ButtonGroup>
       </Box>
-      <button
+      {productType === "" ? (
+        <span className="mt-3 warn-text">Please select a product type</span>
+      ) : (
+        <button
         className="mt-3 tran3s button-primary ripple-btn fw-500"
         onClick={() => handleNext("specific")}
         style={{ backgroundColor: "#000000" }}
       >
         CONTINUE
       </button>
+      )}
     </div>
   );
 };
