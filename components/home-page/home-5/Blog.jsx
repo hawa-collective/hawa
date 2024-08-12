@@ -19,25 +19,24 @@ const Blog = () => {
               <div className="blog-header">
                 <div>
                   <Link
-                    href={`/blog/${item.id}`}
+                    href={`${item.link}`}
                     className="tag text-uppercase fw-500 tran3s mb-20"
                   >
                     {item.tag}
                   </Link>
                 </div>
-                <Link href={`/blog/${item.id}`}>
+                <Link href={`${item.link}`}>
                   <h4 className="tran3s blog-title">{item.title}</h4>
                 </Link>
               </div>
               {/* /.blog-header */}
               <div className="blog-footer d-flex align-items-center justify-content-between mt-auto">
                 <div className="blog-date tran3s fw-500 tx-dark">
-                  Featured -
                   <a href="#" className="fw-normal tran3s">
                     {item.date}
                   </a>
                 </div>
-                <Link href={`/blog/${item.id}`} className="read-more tran3s">
+                <Link href={`${item.link}`} className="read-more tran3s">
                   <i className="bi bi-arrow-up-right" />
                 </Link>
               </div>
