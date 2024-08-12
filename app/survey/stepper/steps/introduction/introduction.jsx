@@ -84,8 +84,12 @@ export default function Introduction({ handleNext }) {
           on menstrual health.
         </Typography>
         <div className="flex-col-center mt-15">
-          <Typography style={{ fontSize: "13px", marginTop: "5px" }}>
-            <strong>Takes 1 minute 30 seconds</strong>
+          <Typography className="tran3s" style={{ fontSize: "13px", marginTop: "5px" }}>
+            {isPageLoaded ? (
+              <strong >Takes 1 minute 30 seconds</strong>
+            ) : (
+              <strong>Patience is a virtue</strong>
+            )}
           </Typography>
           {isPageLoaded ? (
             <button
