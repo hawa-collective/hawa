@@ -80,8 +80,9 @@ const HawaCollective = () => {
                 </h2>
               </div>
               <p className="text-lg text-center text-lg-start md-pt-30 m0">
-                We are a womens' organisation dedicated to helping women between
-                18 - 50 years, choose sanitary products with ease.
+                We are a collective group dedicated to educating the public
+                about sanitary health. We have recently begun a campaign towards
+                eradicating sanitary health poverty.
               </p>
               <br />
               <div className="flex_centered_mobile">
@@ -243,9 +244,9 @@ const HawaCollective = () => {
             <Footer />
             <div className="bottom-footer flex-col-center">
               <div>
-              <p className="copyright text-center m0 foooter-copyright">
-                © {new Date().getFullYear()} <span>The Hawa Collective</span>
-              </p>
+                <p className="copyright text-center m0 foooter-copyright">
+                  © {new Date().getFullYear()} <span>The Hawa Collective</span>
+                </p>
               </div>
               <div>
                 <span
