@@ -61,14 +61,14 @@ export default function Introduction({ handleNext }) {
           >
             Hey You!
           </Typography>
-          <div className="ms-1">
+          {/* <div className="ms-1">
             <Image
               src="/images/media/hand-wave.png"
               alt="logo"
               width={35}
               height={35}
             />
-          </div>
+          </div> */}
         </div>
         <Typography variant="body2" component="div" color="text.secondary">
           Hawa is dedicated to educating the public about menstrual heath.
