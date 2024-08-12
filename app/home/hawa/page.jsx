@@ -245,14 +245,7 @@ const HawaCollective = () => {
               <p className="copyright text-center m0 foooter-copyright">
                 © {new Date().getFullYear()} <span>The Hawa Collective</span>
                 <br />
-                All geneder inclusive{" "}
-                {/* <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.linkedin.com/in/karl-full-stack-dev/"
-                >
-                  The Hawa Tech Team
-                </a> */}
+                All gender inclusive{" "}
               </p>
             </div>
           </div>

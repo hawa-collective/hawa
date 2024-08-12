@@ -45,7 +45,11 @@ const Services = () => {
               className="icon d-flex align-items-center justify-content-center"
               style={{ backgroundColor: service.bgColor }}
             >
-              <img src={service.iconSrc} alt="icon" className="lazy-img animate_jumpfour" />
+              <img
+                src={service.iconSrc}
+                alt="icon"
+                className="lazy-img animate_jumpfour"
+              />
             </div>
             <h5 className="fw-500 mt-35 mb-25">
               <span
