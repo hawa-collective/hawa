@@ -80,8 +80,11 @@ export default function Introduction({ handleNext }) {
           sell your data.
           <br />
           <br />
-          We will only use your data to put together useful insights that guide
+          We will only use your data to curate a personalised experience and put together useful insights that guide
           on menstrual health.
+        </Typography>
+        <Typography variant="body2" component="div" color="text.secondary" style={{ fontSize: "10px" }}>
+        Taking this survey means you agree to our <a href="#privacy-policy">Privacy Policy</a>
         </Typography>
         <div className="flex-col-center mt-15">
           <Typography className="tran3s" style={{ fontSize: "13px", marginTop: "5px" }}>

@@ -199,7 +199,7 @@ const MainMenu = () => {
               //     ? "nav-link dropdown-toggle active-menu"
               //     : "nav-link dropdown-toggle"
               // }
-              href="https://revolution.fuelthemes.net/revolution-corporate-agency/blog/"
+              href="https://hawacollective.medium.com/"
               target="_blank"
               role="button"
             >

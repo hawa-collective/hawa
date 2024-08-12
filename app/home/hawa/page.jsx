@@ -196,7 +196,7 @@ const HawaCollective = () => {
               </div>
               <div className="col-lg-6 col-sm-5 ms-auto d-flex justify-content-center justify-content-sm-end">
                 <Link
-                  href="https://revolution.fuelthemes.net/revolution-corporate-agency/blog/"
+                  href="https://hawacollective.medium.com/"
                   target="_blank"
                   className="tran3s btn-one fw-500 button-primary"
                 >

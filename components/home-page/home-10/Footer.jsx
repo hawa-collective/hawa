@@ -8,8 +8,8 @@ const Footer = () => {
       links: [
         { label: "Home", href: "/" },
         { label: "Guide", href: "/#howdoesitwork" },
-        { label: "About us", href: "#" },
-        { label: "Blog", href: "https://revolution.fuelthemes.net/revolution-corporate-agency/blog/" },
+        { label: "About us", href: "/pages-menu/about-us-v1" },
+        { label: "Blog", href: "https://hawacollective.medium.com/" },
       ],
       classes: "col-lg-2 col-sm-4 ms-auto mb-30",
     },
