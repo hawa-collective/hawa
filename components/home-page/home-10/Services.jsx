@@ -6,14 +6,14 @@ const servicesData = [
     iconSrc: "/images/assets/step1.png",
     title: "Login to begin",
     description:
-      "Login to view and rate sanitary products. First time user? You will be taken through a short survey - so that we know a little about you.",
+      "Login to view and rate sanitary products. You will be taken through a short survey for your first login - so that we know a little about you.",
   },
   {
     bgColor: "rgba(100, 219, 226, 0.18)",
     iconSrc: "/images/assets/step2.png",
     title: "Search for product",
     description:
-      "You can search for rated products using their product types such as 'pad' or brand name such as 'awalys ultra'.",
+      "You can search for rated products using their product types such as 'pad' or brand name such as 'always discreet pads'.",
   },
   {
     bgColor: "rgba(255, 160, 194, 0.18)",
