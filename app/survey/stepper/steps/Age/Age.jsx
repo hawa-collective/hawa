@@ -90,7 +90,7 @@ export default function Age({ handleNext }) {
         />
       </Box>
       {age === "" || age < 16 ? (
-        <span className="mt-3 warn-text">You must be 16years and older to continue.</span>
+        <span className="mt-3 warn-text">You must be 16 years and older to continue.</span>
       ) : (
         <button
           className="mt-3 tran3s button-primary ripple-btn fw-500"

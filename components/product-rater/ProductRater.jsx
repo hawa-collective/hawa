@@ -17,7 +17,7 @@ const StyledRating = styled(Rating)(({ theme }) => ({
 const customIcons = {
   1: {
     icon: <LooksOneIcon color="error" className="mx-3" />,
-    label: "No",
+    label: "Terrible",
   },
   2: {
     icon: <LooksTwoIcon color="error" className="mx-3" />,
