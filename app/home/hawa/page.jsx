@@ -241,12 +241,20 @@ const HawaCollective = () => {
         <div className="container">
           <div className="inner-wrapper">
             <Footer />
-            <div className="bottom-footer">
+            <div className="bottom-footer flex-col-center">
+              <div>
               <p className="copyright text-center m0 foooter-copyright">
                 © {new Date().getFullYear()} <span>The Hawa Collective</span>
-                <br />
-                All gender inclusive{" "}
               </p>
+              </div>
+              <div>
+                <span
+                  className="copyright text-center m0 foooter-copyright"
+                  // style={{ border: "1px solid #000000", padding: "5px 30px" }}
+                >
+                  All gender inclusive
+                </span>
+              </div>
             </div>
           </div>
           {/* /.inner-wrapper */}
