@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -10,6 +10,25 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 
 export default function Introduction({ handleNext }) {
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  useEffect(() => {
+    const handlePageLoad = () => {
+      setIsPageLoaded(true);
+    };
+
+    // Check if the document is already fully loaded
+    if (document.readyState === "complete") {
+      setIsPageLoaded(true);
+    } else {
+      window.addEventListener("load", handlePageLoad);
+    }
+
+    return () => {
+      window.removeEventListener("load", handlePageLoad);
+    };
+  }, []);
+
   return (
     <Card
       className="fade-in-entry"
@@ -68,20 +87,25 @@ export default function Introduction({ handleNext }) {
           <Typography style={{ fontSize: "13px", marginTop: "5px" }}>
             <strong>Takes 1 minute 30 seconds</strong>
           </Typography>
-          <button
-            className="mt-3 tran3s button-primary ripple-btn fw-500"
-            onClick={() => handleNext("location")}
-            style={{ backgroundColor: "#000000" }}
-          >
-            GET STARTED
-          </button>
+          {isPageLoaded ? (
+            <button
+              className="mt-3 tran3s button-primary ripple-btn fw-500"
+              onClick={() => handleNext("location")}
+              style={{ backgroundColor: "#000000" }}
+            >
+              GET STARTED
+            </button>
+          ) : (
+            <button
+              className="mt-3 tran3s button-primary ripple-btn fw-500 button-disabled"
+              onClick={() => handleNext("location")}
+              style={{ backgroundColor: "#707070" }}
+            >
+              LOADING...
+            </button>
+          )}
         </div>
       </CardContent>
-
-      {/* <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
     </Card>
   );
 }

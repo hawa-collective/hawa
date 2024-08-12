@@ -80,7 +80,7 @@ export default function Age({ handleNext }) {
       >
         <TextField
           id="filled-basic"
-          label="Must be 16yrs+"
+          label="Enter your age"
           variant="standard"
           type="number" // Ensure input is restricted to numbers
           value={age}

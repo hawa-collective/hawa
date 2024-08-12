@@ -12,6 +12,15 @@
 
 
 ==========================================================================================*/
+// Disabled Button
+.button-disabled {
+  pointer-events: none; /* Disables clicking and other mouse interactions */
+  opacity: 0.5; /* Reduces the opacity to make it look visually disabled */
+  cursor: not-allowed; /* Changes the cursor to a "not-allowed" sign */
+  background-color: #ccc; /* Optional: Change the background color to indicate it's disabled */
+  color: #777; /* Optional: Change the text color to indicate it's disabled */
+}
+
 // Red warning text
 .warn-text {
   color: red;
