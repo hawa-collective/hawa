@@ -40,11 +40,14 @@ const LoginForm = () => {
   };
 
   const signInWithEmail = async (email) => {
+    const production = `https://hawatest.netlify.app/survey`;
+    const development = `http://localhost:3000`;
+
     const { data, error } = await supabase.auth.signInWithOtp({
       email,
       options: {
         shouldCreateUser: false, // Set this according to your use case
-        emailRedirectTo: "http://localhost:3000/survey", // Change to your redirect URL
+        emailRedirectTo: production, // Change to your redirect URL
       },
     });
 
