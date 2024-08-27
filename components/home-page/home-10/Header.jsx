@@ -50,7 +50,7 @@ const Header = () => {
             </Link> */}
             <Link
               href="/login"
-              className="contact-btn-one fs-16 fw-500 text-white tran3s d-none d-lg-block"
+              className="contact-btn-one fs-16 fw-500 text-white tran3s d-none d-lg-block ls-05"
             >
               Login
             </Link>

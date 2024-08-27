@@ -123,7 +123,15 @@ const LoginForm = () => {
                   onChange={handleCookiePolicyChange}
                 />
                 <label htmlFor="remember">
-                  I accept the <a href="#cookie-policy">Cookie Policy</a>
+                  I accept the{" "}
+                  <a href="/policy/privacy" target="_blank">
+                    Privacy Policy
+                  </a>{" "}
+                  and{" "}
+                  <a href="/policy/cookie" target="_blank">
+                    Cookie Policy
+                  </a>{" "}
+                  while using this website.
                 </label>
               </div>
             </div>

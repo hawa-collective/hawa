@@ -50,7 +50,14 @@ function Survey() {
 
           <p className="mt-auto pt-50 foooter-insight text-center">
             Taking this survey means you agree to our{" "}
-            <a href="">Privacy Policy</a> and <a href="">Terms of Use</a>.
+            <a href="/policy/privacy" target="_blank" className="red-text">
+              Privacy Policy
+            </a>{" "}
+            and{" "}
+            <a href="/policy/cookie" target="_blank" className="red-text">
+              Cookie Policy
+            </a>
+            .
           </p>
           {/* <div className="height-25"></div> */}
           <p className="mt-auto foooter-copyright text-center">
