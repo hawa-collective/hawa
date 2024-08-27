@@ -2916,6 +2916,10 @@
 
 /*Extra Small breakpoints*/
 @media (max-width: 575px) {
+  // Text styles
+  .med_link_font {
+    font-size: 19px;
+  }
   body .btn-fourteen {
     font-size: 15px;
   }
