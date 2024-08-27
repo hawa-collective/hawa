@@ -30,18 +30,15 @@ export default function Introduction({ handleNext }) {
   }, []);
 
   return (
-    <Card
-      className="fade-in-entry flex-col-center"
-      sx={{ maxWidth: 345 }}
-    >
+    <Card className="fade-in-entry flex-col-center" sx={{ maxWidth: 345 }}>
       <div className="mt-4">
-      <Image
-        priority
-        src="/images/media/patience.png"
-        alt="logo"
-        width={100}
-        height={100}
-      />
+        <Image
+          priority
+          src="/images/media/patience.png"
+          alt="logo"
+          width={100}
+          height={100}
+        />
       </div>
       <CardContent>
         <div
@@ -69,7 +66,7 @@ export default function Introduction({ handleNext }) {
             />
           </div> */}
         </div>
-        <Typography variant="body2" component="div" color="text.secondary">
+        <Typography variant="body2" component="div" className="text-dark">
           Hawa is dedicated to educating the public about menstrual heath.
           Completing this survey helps us bring you and many others useful
           information on sanitary products.
