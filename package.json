@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^3.5.0",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -17,10 +18,15 @@
     "@mui/material": "^5.16.4",
     "@mui/material-nextjs": "^5.16.4",
     "@popperjs/core": "^2.11.6",
+    "@supabase/auth-helpers-nextjs": "^0.10.0",
+    "@supabase/ssr": "^0.5.0",
+    "@supabase/supabase-js": "^2.45.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "caniuse-lite": "^1.0.30001589",
     "carousel": "^0.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "next": "14.1.0",
     "photoswipe": "^5.4.3",
     "react": "^18",

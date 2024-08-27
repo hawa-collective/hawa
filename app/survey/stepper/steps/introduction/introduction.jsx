@@ -31,19 +31,18 @@ export default function Introduction({ handleNext }) {
 
   return (
     <Card
-      className="fade-in-entry"
+      className="fade-in-entry flex-col-center"
       sx={{ maxWidth: 345 }}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-      }}
     >
-      <CardMedia
-        sx={{ height: 250 }}
-        image="/images/media/sapiens-neat.png"
-        title="green iguana"
+      <div className="mt-4">
+      <Image
+        priority
+        src="/images/media/patience.png"
+        alt="logo"
+        width={100}
+        height={100}
       />
+      </div>
       <CardContent>
         <div
           className="mb-15"
@@ -80,23 +79,23 @@ export default function Introduction({ handleNext }) {
           sell your data.
           <br />
           <br />
-          We will only use your data to curate a personalised experience and put together useful insights that guide
-          on menstrual health.
-        </Typography>
-        <Typography variant="body2" component="div" color="text.secondary" style={{ fontSize: "10px" }}>
-        Taking this survey means you agree to our <a href="#privacy-policy">Privacy Policy</a>
+          We only use collected data to curate a personalised experience and put
+          together useful insights that guide on menstrual health.
         </Typography>
         <div className="flex-col-center mt-15">
-          <Typography className="tran3s" style={{ fontSize: "13px", marginTop: "5px" }}>
+          <Typography
+            className="tran3s"
+            style={{ fontSize: "13px", marginTop: "5px" }}
+          >
             {isPageLoaded ? (
-              <strong >Takes 1 minute 30 seconds</strong>
+              <strong>Takes 1 minute 15 seconds</strong>
             ) : (
               <strong>Patience is a virtue</strong>
             )}
           </Typography>
           {isPageLoaded ? (
             <button
-              className="mt-3 tran3s button-primary ripple-btn fw-500"
+              className="mt-1 tran3s button-primary ripple-btn fw-500"
               onClick={() => handleNext("location")}
               style={{ backgroundColor: "#000000" }}
             >

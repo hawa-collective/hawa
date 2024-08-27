@@ -34,9 +34,10 @@ const DefaulHeader = () => {
           <div className="logo order-lg-0">
             <Link href="/" className="d-block">
               <Image
+                priority
                 src="/images/logo/hawalogo.png"
                 alt="logo"
-                width={95}
+                width={75}
                 height={30}
               />
             </Link>

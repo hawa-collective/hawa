@@ -40,10 +40,11 @@ const MainMenu = () => {
             <div className="logo">
               <Link href="/" className="d-block">
                 <Image
+                  priority
                   src="/images/logo/hawalogo.png"
                   alt="logo"
-                  width={100}
-                  height={50}
+                  width={75}
+                  height={35}
                 />
               </Link>
             </div>
@@ -51,7 +52,7 @@ const MainMenu = () => {
           {/* End li */}
 
           <li className="nav-item">
-          <a
+            <a
               // className="nav-link dropdown-toggle active-menu"
               href="/"
               role="button"
@@ -223,12 +224,7 @@ const MainMenu = () => {
           {/* End li (blog) */}
 
           <li className="nav-item dropdown">
-            <a
-              className="nav-link"
-              href="/contact/contact-v2"
-              role="button"
-              
-            >
+            <a className="nav-link" href="/contact/contact-v2" role="button">
               Contact
             </a>
             {/* <ul className="dropdown-menu">
@@ -261,7 +257,8 @@ const MainMenu = () => {
             </Link> */}
             <Link
               href="/login"
-              className="btn-twentyOne fw-500 tran3s font-lemon-yellow med_link_font"
+              className="btn-twentyOne fw-500 tran3s font-lemon-yellow mobile_login_btn"
+              style={{ fontSize: "50px" }}
             >
               Login
             </Link>

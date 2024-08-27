@@ -34,12 +34,16 @@ const MainMenuOriginal = () => {
       </button>
       {/* End mobile collapse menu */}
 
-      <div className="collapse navbar-collapse font-lemon-yellow" id="navbarNav">
+      <div
+        className="collapse navbar-collapse font-lemon-yellow"
+        id="navbarNav"
+      >
         <ul className="navbar-nav">
           <li className="d-block d-lg-none">
             <div className="logo">
               <Link href="/" className="d-block">
                 <Image
+                  priority
                   src="/images/logo/hawalogo.png"
                   alt="logo"
                   width={100}
@@ -51,7 +55,7 @@ const MainMenuOriginal = () => {
           {/* End li */}
 
           <li className="nav-item">
-          <a
+            <a
               // className="nav-link dropdown-toggle active-menu"
               href="/"
               role="button"

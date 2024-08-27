@@ -33,7 +33,9 @@ export default function RateProduct({
   };
 
   // Check if all ratings are provided
-  const allRatingsProvided = Object.values(ratings).every((rating) => rating !== null);
+  const allRatingsProvided = Object.values(ratings).every(
+    (rating) => rating !== null
+  );
 
   return (
     <div className="flex-col-center">
@@ -47,18 +49,27 @@ export default function RateProduct({
         <div className="height-15"></div>
       </div>
       <div>
-        <div className="mb-35">
-          <h5 className="font_futurabook">Affordability</h5>
-          <ProductRater
-            productType={productType}
-            setProductType={setProductType}
-            factorName="Affordability"
-            onRatingChange={handleRatingChange}
-            rating={ratings.Affordability}
-          />
+        <div className="flex-col-center mb-35 floating-card my-3 br-4">
+          <div className="px-3 pt-2">
+            <h4 className="font_futurabook fw-bold fw-bold">Affordability</h4>
+          </div>
+          <div style={{ border: "1px dotted #1c1c1c", width: "100%" }}></div>
+          <div className="px-3 py-2" style={{ backgroundColor: "#600c00" }}>
+            <ProductRater
+              productType={productType}
+              setProductType={setProductType}
+              factorName="Affordability"
+              onRatingChange={handleRatingChange}
+              rating={ratings.Affordability}
+            />
+          </div>
         </div>
-        <div className="mb-35">
-          <h5 className="font_futurabook">Ease of Use</h5>
+        <div className="flex-col-center mb-35 floating-card my-3 br-4">
+          <div className="px-3 pt-2">
+            <h4 className="font_futurabook fw-bold">Ease of Use</h4>
+          </div>
+          <div style={{ border: "1px dotted #1c1c1c", width: "100%" }}></div>
+          <div className="px-3 py-2" style={{ backgroundColor: "#600c00" }}>
           <ProductRater
             productType={productType}
             setProductType={setProductType}
@@ -66,9 +77,14 @@ export default function RateProduct({
             onRatingChange={handleRatingChange}
             rating={ratings.EaseOfUse}
           />
+          </div>
         </div>
-        <div className="mb-35">
-          <h5 className="font_futurabook">Comfort</h5>
+        <div className="flex-col-center mb-35 floating-card my-3 br-4">
+          <div className="px-3 pt-2">
+            <h4 className="font_futurabook fw-bold">Comfort</h4>
+          </div>
+          <div style={{ border: "1px dotted #1c1c1c", width: "100%" }}></div>
+          <div className="px-3 py-2" style={{ backgroundColor: "#600c00" }}>
           <ProductRater
             productType={productType}
             setProductType={setProductType}
@@ -76,6 +92,7 @@ export default function RateProduct({
             onRatingChange={handleRatingChange}
             rating={ratings.Comfort}
           />
+          </div>
         </div>
       </div>
       {allRatingsProvided ? (

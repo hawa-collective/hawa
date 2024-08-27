@@ -16,7 +16,6 @@ const FancyBanner = () => {
               data-aos-delay="100"
             >
               Reach out to us for any help.<br />
-              Feel free to also drop in extra comments about our efforts to bring you Hawa.<br />
               We would love to hear from you!
             </p>
             <a

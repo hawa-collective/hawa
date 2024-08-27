@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { useTheme } from '@mui/material/styles';
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import LooksOneIcon from "@mui/icons-material/LooksOne";
@@ -10,29 +11,30 @@ import Looks5Icon from "@mui/icons-material/Looks5";
 
 const StyledRating = styled(Rating)(({ theme }) => ({
   "& .MuiRating-iconEmpty .MuiSvgIcon-root": {
-    color: theme.palette.action.disabled,
+    color: "#ffffff",
+    boxShadow: "1px 1px 1px #ffffff",
   },
 }));
 
 const customIcons = {
   1: {
-    icon: <LooksOneIcon color="error" className="mx-3" />,
+    icon: <LooksOneIcon sx={{ fontSize: "37px", }} color="error" className="mx-3 icon-box-shadow" />,
     label: "Terrible",
   },
   2: {
-    icon: <LooksTwoIcon color="error" className="mx-3" />,
+    icon: <LooksTwoIcon sx={{ fontSize: "37px", }} color="error" className="mx-3 icon-box-shadow" />,
     label: "Bad",
   },
   3: {
-    icon: <Looks3Icon color="warning" className="mx-3" />,
+    icon: <Looks3Icon sx={{ fontSize: "37px", }} color="warning" className="mx-3 icon-box-shadow" />,
     label: "Fair",
   },
   4: {
-    icon: <Looks4Icon color="success" className="mx-3" />,
+    icon: <Looks4Icon sx={{ fontSize: "37px", }} color="success" className="mx-3 icon-box-shadow" />,
     label: "Good",
   },
   5: {
-    icon: <Looks5Icon color="success" className="mx-3" />,
+    icon: <Looks5Icon sx={{ fontSize: "37px", }} color="success" className="mx-3 icon-box-shadow" />,
     label: "Perfect",
   },
 };
@@ -41,10 +43,12 @@ function IconContainer(props) {
   const { value, ...other } = props;
   return (
     <div className="flex-col-center">
-      <span {...other} style={{ fontSize: "13px" }}>
+      <span {...other} style={{ fontSize: "13px", color: "#ffffff" }}>
         {customIcons[value].label}
       </span>
-      <span {...other}>{customIcons[value].icon}</span>
+      <span {...other}>
+        {customIcons[value].icon}
+      </span>
     </div>
   );
 }

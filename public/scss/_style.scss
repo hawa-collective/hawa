@@ -12,6 +12,17 @@
 
 
 ==========================================================================================*/
+// Letter spacing styles
+.ls-05 {
+  letter-spacing: 0.05rem;
+}
+.ls-1 {
+  letter-spacing: 0.1rem;
+}
+// Border radius styles
+.br-4 {
+  border-radius: 4px !important;
+}
 // Disabled Button
 .button-disabled {
   pointer-events: none; /* Disables clicking and other mouse interactions */
@@ -28,6 +39,13 @@
 }
 .text-left {
   text-align: left !important;
+}
+.icon-box-shadow {
+  border: 1px solid #600c00 !important;
+  border-radius: 3px !important; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+              0 6px 20px rgba(0, 0, 0, 0.1) !important; /* Dark shadow with a gentle glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Smooth hover effect */
 }
 // Card border
 .floating-card {
@@ -516,6 +534,9 @@ p {
 }
 .font-jost {
   font-family: "jostregular", sans-serif;
+}
+.mobile_login_btn {
+  font-size: 37px !important;
 }
 .card_link_font {
   font-size: 21px;

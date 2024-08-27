@@ -46,6 +46,7 @@ const Header4 = () => {
           <div className="logo order-lg-0">
             <Link href="/">
               <Image
+                priority
                 width={95}
                 height={30}
                 src="/images/logo/hawalogo.png"

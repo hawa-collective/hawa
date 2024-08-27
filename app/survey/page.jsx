@@ -16,7 +16,12 @@ function Survey() {
             <div className="d-flex align-items-center justify-content-between">
               <div className="logo order-lg-0">
                 <Link href="/" className="d-block">
-                  <img src="/images/logo/hawalogo.png" alt="" width={75} />
+                  <img
+                    priority
+                    src="/images/logo/hawalogo.png"
+                    alt=""
+                    width={55}
+                  />
                 </Link>
               </div>
               <Link href="/" className="go-back-btn fw-500 tran3s">

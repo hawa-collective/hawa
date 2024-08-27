@@ -19,8 +19,17 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#600c00"
-    }
+      light: '#757ce8',
+      main: '#600c00',
+      dark: '#002884',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ff7961',
+      main: '#f44336',
+      dark: '#ba000d',
+      contrastText: '#000',
+    },
   },
   shadows: ["none", "0px 1px 3px rgba(0, 0, 0, 0.2)", "0px 1px 5px rgba(0, 0, 0, 0.2)"]
 });

@@ -42,6 +42,7 @@ const Header3 = () => {
           <div className="logo order-lg-0">
             <Link href="/" className="logo order-lg-0">
               <Image
+                priority
                 src="/images/logo/hawalogo.png"
                 alt="logo"
                 width={95}
