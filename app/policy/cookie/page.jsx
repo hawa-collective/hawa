@@ -44,7 +44,7 @@ const Cookie = () => {
                     data-aos="fade-right"
                   >
                     <div className="mb-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         1. Introduction
                       </h2>
                       <p>
@@ -58,7 +58,7 @@ const Cookie = () => {
                       </p>
                     </div>
                     <div className="mb-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         2. What Are Cookies?
                       </h2>
                       <p>
@@ -69,7 +69,7 @@ const Cookie = () => {
                       </p>
                     </div>
                     <div className="mb-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         3. How We Use Cookies
                       </h2>
                       <p>
@@ -93,7 +93,7 @@ const Cookie = () => {
                       </ul>
                     </div>
                     <div className="mb-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         4. Types of Cookies We Use
                       </h2>
                       <ul>
@@ -116,7 +116,7 @@ const Cookie = () => {
                       </ul>
                     </div>
                     <div className="mb-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         5. Managing Cookies
                       </h2>
                       <p>
@@ -128,7 +128,7 @@ const Cookie = () => {
                       </p>
                     </div>
                     <div className="mb-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         6. Changes to This Cookie Policy
                       </h2>
                       <p>
@@ -140,7 +140,7 @@ const Cookie = () => {
                       </p>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         7. Contact Us
                       </h2>
                       <p>

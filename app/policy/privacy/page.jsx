@@ -44,7 +44,7 @@ const Privacy = () => {
                     data-aos="fade-right"
                   >
                     <div className="mb-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         1. Introduction
                       </h2>
                       <p>
@@ -71,7 +71,7 @@ const Privacy = () => {
                       </p>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         2. Information We Collect
                       </h2>
                       <p>
@@ -97,7 +97,7 @@ const Privacy = () => {
                       </ul>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         3. How We Use Your Information
                       </h2>
                       <p>
@@ -129,7 +129,7 @@ const Privacy = () => {
                       </ul>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         4. Data Sharing and Disclosure
                       </h2>
                       <p>
@@ -156,7 +156,7 @@ const Privacy = () => {
                       </ul>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         5. User Rights and Data Access
                       </h2>
                       <p>As a user, you have the right to:</p>
@@ -182,7 +182,7 @@ const Privacy = () => {
                       </ul>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         6. Security of Your Information
                       </h2>
                       <p>
@@ -195,7 +195,7 @@ const Privacy = () => {
                       </p>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         7. Use of Cookies and Similar Technologies
                       </h2>
                       <p>
@@ -214,7 +214,7 @@ const Privacy = () => {
                       </p>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         8. Third-Party Websites
                       </h2>
                       <p>
@@ -227,7 +227,7 @@ const Privacy = () => {
                       </p>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         9. Changes to This Privacy Policy
                       </h2>
                       <p>
@@ -242,7 +242,7 @@ const Privacy = () => {
                       </p>
                     </div>
                     <div className="my-4 text-dark">
-                      <h2 className="font_futurabook text-uppercase med_link_font ls-05">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         10. Contact Us
                       </h2>
                       <p>
