@@ -30,17 +30,18 @@ const HawaHub = () => {
             <div className="title-style-five">
               <h2 className="main-title tx-dark fw-bold">Hawa Hub</h2>
             </div>
-            <p className="fs-20 mt-30 lg-mt-20">
+            <p className="fs-20 mt-30 lg-mt-20 hide-mid hide-mobile">
               Welcome to Hawa Hub! 😊
               <br /> A one stop dashboard where you can
               <br />
               explore sanitary products, rate them yourself, and answer surveys.
             </p>
+            <p className="fs-20 mt-30 lg-mt-20 hide-large">Hawa Hub is not ready on tabs and mobile.</p>
           </div>
           {/* End container */}
 
           <div
-            className="container"
+            className="container hide-mid hide-mobile"
             style={{
               minWidth: "100%",
             }}
