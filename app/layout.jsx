@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import "../styles/index.scss";
 
 import ScrollToTop from "@/components/common/ScrollTop";
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       <LoadingProvider>
         <UserProvider>
           <AppRouterCacheProvider>
+          <AntdRegistry>
             <ThemeProvider theme={theme}>
               <div className="main-page-wrapper">
                 {/* <Buffer /> */}
@@ -40,6 +42,7 @@ export default function RootLayout({ children }) {
                 <ScrollToTop />
               </div>
             </ThemeProvider>
+            </AntdRegistry>
           </AppRouterCacheProvider>
         </UserProvider>
         </LoadingProvider>

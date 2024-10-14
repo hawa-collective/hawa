@@ -11,6 +11,9 @@ const HeroSubscribe = () => {
         onSubmit={handleSubmit}
         action="#"
         className="position-relative bg-white"
+        style={{
+          minWidth: "100%"
+        }}
       >
         <label className="position-absolute fs-15">
           Product type or brand name

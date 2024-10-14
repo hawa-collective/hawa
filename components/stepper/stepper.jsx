@@ -3,11 +3,7 @@
 "use client";
 
 import React, { useState, Fragment } from "react";
-import Link from "next/link";
 import Box from "@mui/material/Box";
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
@@ -92,7 +88,7 @@ export default function HorizontalLinearStepper() {
       case "heaviest":
         setStepStatus("rating");
         break;
-      case "extra":
+      case "comment":
         setStepStatus("heaviest");
         break;
       default:
@@ -134,11 +130,11 @@ export default function HorizontalLinearStepper() {
     sessionStorage.removeItem("period");
     sessionStorage.removeItem("product type");
     sessionStorage.removeItem("brand");
-    sessionStorage.removeItem("Affordability");
-    sessionStorage.removeItem("EaseOfUse");
-    sessionStorage.removeItem("Comfort");
+    sessionStorage.removeItem("affordability");
+    sessionStorage.removeItem("ease");
+    sessionStorage.removeItem("comfort");
     sessionStorage.removeItem("usage");
-    sessionStorage.removeItem("extra");
+    sessionStorage.removeItem("comment");
   };
 
   const ProductTypeSelect = (productType) => {

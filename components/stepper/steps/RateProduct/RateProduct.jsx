@@ -8,17 +8,17 @@ export default function RateProduct({
   handleNext,
 }) {
   const [ratings, setRatings] = useState({
-    Affordability: null,
-    EaseOfUse: null,
-    Comfort: null,
+    affordability: null,
+    ease: null,
+    comfort: null,
   });
 
   useEffect(() => {
     // Retrieve ratings from sessionStorage when the component mounts
     const storedRatings = {
-      Affordability: sessionStorage.getItem("Affordability"),
-      EaseOfUse: sessionStorage.getItem("EaseOfUse"),
-      Comfort: sessionStorage.getItem("Comfort"),
+      affordability: sessionStorage.getItem("affordability"),
+      ease: sessionStorage.getItem("ease"),
+      comfort: sessionStorage.getItem("comfort"),
     };
     setRatings(storedRatings);
   }, []);
@@ -58,9 +58,9 @@ export default function RateProduct({
             <ProductRater
               productType={productType}
               setProductType={setProductType}
-              factorName="Affordability"
+              factorName="affordability"
               onRatingChange={handleRatingChange}
-              rating={ratings.Affordability}
+              rating={ratings.affordability}
             />
           </div>
         </div>
@@ -73,9 +73,9 @@ export default function RateProduct({
           <ProductRater
             productType={productType}
             setProductType={setProductType}
-            factorName="EaseOfUse"
+            factorName="ease"
             onRatingChange={handleRatingChange}
-            rating={ratings.EaseOfUse}
+            rating={ratings.ease}
           />
           </div>
         </div>
@@ -88,9 +88,9 @@ export default function RateProduct({
           <ProductRater
             productType={productType}
             setProductType={setProductType}
-            factorName="Comfort"
+            factorName="comfort"
             onRatingChange={handleRatingChange}
-            rating={ratings.Comfort}
+            rating={ratings.comfort}
           />
           </div>
         </div>

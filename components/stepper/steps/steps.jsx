@@ -5,13 +5,12 @@ import Age from "./Age/Age";
 import Flow from "./FlowType/Flow";
 import Period from "./Period/Period";
 import ProductType from "./product-type/ProductType";
-import BrandType from "./brand-type/BrandType";
 import PadsTamponsUndies from "./PadsTamponsUndies/PadsTamponsUndies";
 import CupAndDisk from "./CupAndDisk/CupAndDisk";
 import RateProduct from "./RateProduct/RateProduct";
 import HeaviestPads from "./HeaviestPads/HeaviestPads";
 import HeaviestCups from "./HeaviestCups/HeaviestCups";
-import Extra from "./Extra/Extra";
+import Comment from "./Comment/Comment";
 
 function Steps({
   stepStatus,
@@ -95,9 +94,9 @@ function Steps({
         return (
           <HeaviestCups productType={productType} handleNext={handleNext} />
         );
-      case "extra":
+      case "comment":
         return (
-          <Extra Brand={Brand} setBrand={setBrand} handleNext={handleNext} />
+          <Comment Brand={Brand} setBrand={setBrand} handleNext={handleNext} />
         );
       default:
         return <div>Unknown step !!!!</div>;

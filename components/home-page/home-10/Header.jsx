@@ -42,17 +42,17 @@ const Header = () => {
             </Link>
           </div>
           <div className="right-widget ms-auto d-flex align-items-center order-lg-3">
-            {/* <Link
-              href="/contact/contact-v2"
-              className="contact-btn-one fs-16 fw-500 text-white tran3s d-none d-lg-block"
+          <Link
+              href="/hawa-hub"
+              className="login-btn-three rounded-circle tran3s me-3"
             >
-              Contact us
-            </Link> */}
+              <i className="bi bi-person" />
+            </Link>
             <Link
               href="/login"
               className="contact-btn-one fs-16 fw-500 text-white tran3s d-none d-lg-block ls-05"
             >
-              Login
+              LOGIN
             </Link>
           </div>{" "}
           {/* /.right-widget */}

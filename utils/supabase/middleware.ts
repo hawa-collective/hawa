@@ -19,7 +19,9 @@ export const createClient = (request: NextRequest) => {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) => request.cookies.set(name, value));
+          cookiesToSet.forEach(({ name, value, options }) =>
+            request.cookies.set(name, value)
+          );
           supabaseResponse = NextResponse.next({
             request,
           });
@@ -39,17 +41,21 @@ export async function middleware(request: NextRequest) {
   const { supabase, supabaseResponse } = createClient(request);
 
   // List of protected routes
-  const protectedRoutes = ['/products'];
+  const protectedRoutes = ["/products", "/survey"];
 
   // Check if the request path is in the protected routes
-  if (protectedRoutes.some((route) => request.nextUrl.pathname.startsWith(route))) {
+  if (
+    protectedRoutes.some((route) => request.nextUrl.pathname.startsWith(route))
+  ) {
     // Check if user is authenticated
-    const { data: { user } } = await supabase.auth.getUser();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
     // console.log("User logged in: ", user);
 
     if (!user) {
       // Redirect to the login page if the user is not authenticated
-      return NextResponse.redirect(new URL('/login', request.url));
+      return NextResponse.redirect(new URL("/login", request.url));
     }
   }
 
@@ -60,8 +66,8 @@ export async function middleware(request: NextRequest) {
 // Apply middleware only to specific routes
 export const config = {
   matcher: [
-    '/dashboard/:path*', // Protect all paths under /dashboard
-    '/profile',          // Protect /profile page
+    "/survey", // Protect all paths under /dashboard
+    "/products", // Protect /profile page
     // Add more specific routes as needed
   ],
 };

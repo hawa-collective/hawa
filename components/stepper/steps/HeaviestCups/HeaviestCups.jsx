@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import Button from "@mui/material/Button";
 
-export default function HeaviestPads({ productType, handleNext }) {
+export default function HeaviestCups({ productType, handleNext }) {
   const [productUsage, setProductUsage] = useState("");
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function HeaviestPads({ productType, handleNext }) {
         className="text-center survey-title mb-3 letter-spacing-5 font-jost p-1"
         style={{ textAlign: "center" }}
       >
-        How many {productType}s do you use on your heaviest day ?
+        How often do you need to empty the {productType} on your heaviest day ?
       </span>
       <p>From when you wake up to when you sleep</p>
       <div className="height-15"></div>
@@ -148,7 +148,7 @@ export default function HeaviestPads({ productType, handleNext }) {
                 component="div"
                 className="lowercase text-initial"
               >
-                It's serious war here
+                This can be a challenge
               </Typography>
             </CardContent>
           </Box>
@@ -167,7 +167,7 @@ export default function HeaviestPads({ productType, handleNext }) {
       ) : (
         <button
           className="mt-3 tran3s button-primary ripple-btn fw-500"
-          onClick={() => handleNext("extra")}
+          onClick={() => handleNext("comment")}
           style={{ backgroundColor: "#000000" }}
         >
           CONTINUE

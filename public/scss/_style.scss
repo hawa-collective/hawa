@@ -12,6 +12,22 @@
 
 
 ==========================================================================================*/
+.product_details_drawer p {
+  font-family: "futurabook";
+  font-size: 17px;
+}
+.product_details_drawer h3 {
+  font-family: "futurabook";
+  font-size: 21px;
+  font-weight: 900;
+}
+.product_details_card .ant-card-body {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  min-width: 100% !important;
+}
 // Letter spacing styles
 .ls-05 {
   letter-spacing: 0.05rem;
@@ -32,9 +48,16 @@
   color: #777; /* Optional: Change the text color to indicate it's disabled */
 }
 
+.text-center {
+  text-align: center !important;
+}
 // Red warning text
 .warn-text {
   color: red;
+  font-size: 14px;
+}
+.success-text {
+  color: green;
   font-size: 14px;
 }
 .policy-text {
@@ -59,8 +82,7 @@
 .icon-box-shadow {
   border: 1px solid #600c00 !important;
   border-radius: 3px !important; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
-              0 6px 20px rgba(0, 0, 0, 0.1) !important; /* Dark shadow with a gentle glow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1) !important; /* Dark shadow with a gentle glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Smooth hover effect */
 }
 // Card border
@@ -68,20 +90,17 @@
   background-color: white !important;
   border: 1px solid #600c00 !important;
   border-radius: 3px !important; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
-              0 6px 20px rgba(0, 0, 0, 0.1) !important; /* Dark shadow with a gentle glow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1) !important; /* Dark shadow with a gentle glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Smooth hover effect */
 }
 
 .floating-card:active {
   transform: translateY(-5px) !important; /* Slight lift on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 
-              0 12px 40px rgba(0, 0, 0, 0.2) !important; /* Enhanced shadow on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2) !important; /* Enhanced shadow on hover */
 }
 .floating-card:focus {
   border: 1px solid #600c00 !important;
 }
-
 
 .selected-card {
   border: 1px solid #600c00 !important;
@@ -151,6 +170,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 // Aligns items in center using flex row
 .flex-row-center {
@@ -446,7 +469,7 @@ h6 {
 }
 .h1,
 h1 {
-  font-size: 196px;
+  font-size: 67px;
   line-height: 1.18em; /*done*/
 }
 .h2,
@@ -1548,7 +1571,7 @@ body .btn-twentySix:hover:after {
 .theme-main-menu .login-btn-three {
   width: 55px;
   height: 55px;
-  border: 1px solid #e9e9e9;
+  border: 1px solid #600c00;
   text-align: center;
   line-height: 53px;
   color: var(--prime-ten);

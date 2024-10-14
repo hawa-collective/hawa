@@ -1,5 +1,5 @@
 import React from "react";
-import Stepper from "./stepper/stepper";
+import Stepper from "@/components/stepper/stepper";
 import Link from "next/link";
 
 function Survey() {

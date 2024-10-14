@@ -3,15 +3,23 @@
 import React, { useState } from "react";
 import { createClient } from "@/utils/supabase/client";
 
+console.log("Current Process: ", process.env.NODE_ENV); // Outputs 'production'
+
+
 const LoginForm = () => {
+  const production = `https://hawatest.netlify.app/survey`;
+  const development = `http://localhost:3000/survey`;
+
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [notice, setNotice] = useState("");
   const [error, setError] = useState(false);
+  const [policyError, setPolicyError] = useState(false);
   const [isCookiePolicyAccepted, setIsCookiePolicyAccepted] = useState(false); // State for cookie policy
   const supabase = createClient();
 
+  console.log("Message Status: ", message);
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
@@ -20,18 +28,22 @@ const LoginForm = () => {
     const emailValue = e.target.value;
     setEmail(emailValue); // Update email state on every change
 
-    // Validate the email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const completeEmail = emailRegex.test(emailValue);
+    // Validate the user email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const completeEmail = emailRegex.test(emailValue.trim());
 
     if (completeEmail) {
-      setError(false); // Clear error state if email is valid
+      setError(false);
+      setNotice("");
     } else if (isCookiePolicyAccepted && !completeEmail) {
       setError(true);
       setNotice("Please complete the email address.");
-    } else {
+    } else if (!isCookiePolicyAccepted && !completeEmail) {
       setError(true);
-      setNotice("Please enter a valid email address.");
+      setNotice("You must complete the email address and accept the privacy & cookie policies.");
+    } else {
+      setError(false);
+      setNotice("");
     }
   };
 
@@ -40,42 +52,75 @@ const LoginForm = () => {
   };
 
   const signInWithEmail = async (email) => {
-    const production = `https://hawatest.netlify.app/survey`;
-    const development = `http://localhost:3000`;
-
+    const development=`http://localhost:3000`;
+    const redirectUrl =
+      process.env.NODE_ENV === "production" ? production : development;
+  
+    console.log("Signing in with email:", email);
+    console.log("Redirect URL:", redirectUrl);
+  
     const { data, error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        shouldCreateUser: false, // Set this according to your use case
-        emailRedirectTo: production, // Change to your redirect URL
+        shouldCreateUser: true,
+        emailRedirectTo: redirectUrl,
       },
     });
-
+  
     if (error) {
       console.error("Error sending OTP:", error.message);
       setMessage("Error sending OTP. Please try again.");
+      setError(true);
       return;
     }
-
+  
+    setError(false);
     setMessage("A login link has been sent to the email entered below.");
-  };
+  };  
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!isCookiePolicyAccepted) {
-      setError(true);
-      setNotice("You must agree to the cookie policy to proceed.");
+      setPolicyError(true);
+      setNotice("You must accept the privacy & cookie policies.");
       return; // Prevent form submission if cookie policy is not accepted
-    } else if (isCookiePolicyAccepted && error) {
-      setNotice("Please complete the email address.");
-    }
-
-    if (isCookiePolicyAccepted && !error) {
+    } else if (isCookiePolicyAccepted && !error) {
+      setPolicyError(false);
       // Proceed only if there are no errors
       await signInWithEmail(email);
     }
+    // checkUserStatus();
   };
+
+  async function checkUserStatus() {
+    const { data: user, error } = await supabase.auth.getUser();
+
+    if (error) {
+      console.error("Error retrieving user:", error.message);
+      return;
+    }
+
+    if (user) {
+      console.log("User is signed in:", user);
+    } else {
+      console.log("No user is signed in.");
+    }
+  }
+
+  async function signOut() {
+    const { error } = await supabase.auth.signOut();
+    checkUserStatus();
+
+    if (error) {
+      console.error("Error logging out user:", error.message);
+      alert("Error logging out: " + error.message); // Display an alert in case of error
+      return;
+    }
+
+    alert("User has been successfully logged out!"); // Display an alert if successful
+  }
 
   return (
     <div>
@@ -84,16 +129,15 @@ const LoginForm = () => {
           <div className="col-12">
             {message && (
               <p
-                style={{
-                  fontSize: "14px",
-                  color: "green",
-                  textAlign: "center",
-                }}
+                className={`text-center ${
+                  message && !error ? "success-text" : "warn-text"
+                }`}
               >
                 {message}
               </p>
             )}
-            {error && notice && (
+
+            {notice && !message && (
               <p
                 style={{
                   fontSize: "14px",
@@ -148,6 +192,13 @@ const LoginForm = () => {
             >
               Send Link
             </button>
+            {/* <button
+              className="btn-twentyTwo w-100 fw-500 tran3s mt-0 font-lemon-yellow med_link_font"
+              type="button"
+              onClick={() => signOut()}
+            >
+              Sign Out
+            </button> */}
           </div>
           {/* End .col-12 */}
         </div>

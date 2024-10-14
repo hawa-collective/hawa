@@ -1,6 +1,6 @@
 {
-  "name": "jano-next-appdir",
-  "version": "1.5.0",
+  "name": "hawa-collective",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.1",
     "@auth0/nextjs-auth0": "^3.5.0",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",
@@ -39,6 +40,7 @@
     "react-photoswipe-gallery": "^3.0.1",
     "react-slick": "^0.30.2",
     "react-tabs": "^6.0.2",
+    "resend": "^4.0.0",
     "sass": "^1.71.1",
     "slick": "^1.12.2",
     "slick-carousel": "^1.8.1"
