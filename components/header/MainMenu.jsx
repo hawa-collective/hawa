@@ -224,7 +224,7 @@ const MainMenu = () => {
           {/* End li (blog) */}
 
           <li className="nav-item dropdown">
-            <a className="nav-link" href="/contact/contact-v2" role="button">
+            <a className="nav-link" href="/contact" role="button">
               Contact
             </a>
             {/* <ul className="dropdown-menu">

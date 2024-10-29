@@ -32,9 +32,7 @@ const HawaHub = () => {
             </div>
             <p className="fs-20 mt-30 lg-mt-20 hide-mid hide-mobile">
               Welcome to Hawa Hub! 😊
-              <br /> A one stop dashboard where you can
-              <br />
-              explore sanitary products, rate them yourself, and answer surveys.
+              <br /> You can search for rated products using their product types such as 'pad' or brand name.
             </p>
             <p className="fs-20 mt-30 lg-mt-20 hide-large">Hawa Hub is not ready on tabs and mobile.</p>
           </div>

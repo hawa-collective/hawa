@@ -189,6 +189,7 @@ const LoginForm = () => {
             <button
               className="btn-twentyTwo w-100 fw-500 tran3s mt-0 font-lemon-yellow med_link_font"
               type="submit"
+              // disabled={!email || !isCookiePolicyAccepted || error}
             >
               Send Link
             </button>

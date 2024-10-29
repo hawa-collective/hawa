@@ -5,14 +5,14 @@ import { useInView } from "react-intersection-observer";
 
 const data = [
   {
-    count: 50,
+    count: 0,
     label: "Rated Santiary Products",
     unit: "+",
     colClass: "col-sm-6",
     delay: "100",
   },
   {
-    count: 10,
+    count: 0,
     label: "Product Brands",
     unit: "+",
     colClass: "col-lg-4 col-sm-6",

@@ -9,7 +9,7 @@ import Link from "next/link";
 import VideoBlock from "@/components/about/VideoBlock";
 import Counter from "@/components/about/Counter";
 export const metadata = {
-  title: "About Us V1 || Jano - Creative Multipurpose React NextJS Template",
+  title: "Our Story - The Hawa Collective",
 };
 const OurStory = () => {
   const features = [
@@ -50,22 +50,23 @@ const OurStory = () => {
                 <div className="sc-title-two fst-italic position-relative">
                   Our Mission.
                 </div>
-                <h2 className="main-title fw-500 tx-dark">
-                  We’re giving sanitary products a new light.
+                <h2 className="main-title fw-500 tx-dark" style={{ letterSpacing: "0.09rem", fontSize: "37px" }}>
+                  We are your one stop shop for reproductive health information.
                 </h2>
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row mt-100">
             <div className="col-xl-8 col-lg-9 ms-auto">
               <div className="ps-xxl-5" data-aos="fade-left">
                 <h6 className="mb-30 font_futurabook">Our Story</h6>
                 <p className="text-lg tx-dark">
-                  The Hawa Collective was formed to give a different perspective
-                  to the mensuration cycle. We are driven with the goal of
-                  educating all women (binary & non-binary) on the sanitary
-                  product(s) that work for them. We believe that well-managed
-                  sanitary health will generally improve one's quality of life.
+                  Our goal is to educate on reproductive health and give a voice
+                  to menstruators on the menstrual products that work for them.
+                  We believe that having access to information on menstrual
+                  health will help all individuals make informed decisions about
+                  their health and the products they use, improving their
+                  quality of life.
                 </p>
                 <div className="row">
                   <Counter />
@@ -77,14 +78,16 @@ const OurStory = () => {
         {/* /.container */}
 
         <img
-          src="/images/shape/shape_171.svg"
+          src="/images/media/menses.png"
           alt="shape"
           className="lazy-img shapes shape-one"
+          style={{ height: "250px", }}
         />
         <img
-          src="/images/shape/shape_172.svg"
+          src="/images/media/tamponlady.png"
           alt="shape"
           className="lazy-img shapes shape-two"
+          style={{ height: "250px" }}
         />
       </div>
       {/* /.fancy-feature-fiftyOne */}
@@ -94,7 +97,7 @@ const OurStory = () => {
 				Feature Section Fifty Two
 			============================================== 
 			--> */}
-      <VideoBlock />
+      {/* <VideoBlock /> */}
 
       {/* <!-- /.fancy-feature-fiftyTwo --> */}
 
@@ -103,7 +106,7 @@ const OurStory = () => {
 				Feature Section Thirty Seven
 			============================================== 
 			*/}
-      <div className="fancy-feature-thirtySeven mt-225 lg-mt-120">
+      <div className="fancy-feature-thirtySeven mt-100">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -113,22 +116,30 @@ const OurStory = () => {
               >
                 <div className="title-style-six">
                   <div className="sc-title-two text-uppercase">WHY HAWA?</div>
-                  <h2 className="main-title fw-500 tx-dark">
-                    Everything you've ever needed when choosing a sanitary product that works for
-                    you.
+                  <h2
+                    className="main-title fw-500 tx-dark font_futurabook"
+                    style={{ fontSize: "24px" }}
+                  >
+                    Everything you've ever needed to know when choosing a
+                    menstrual product that works for you.
+                    <br />
+                    <br /> Hawa offers country specific surveyed information on
+                    preferred menstrual products, to help menstruators make the
+                    best choice for themselves on what to use.
                   </h2>
                 </div>
+                <div></div>
                 {/* /.title-style-ten */}
-                <p className="fs-20 pt-20 pb-30 lg-pt-10 lg-pb-20">
+                {/* <p className="fs-20 pt-20 pb-30 lg-pt-10 lg-pb-20">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <ul className="style-none list-item">
+                </p> */}
+                {/* <ul className="style-none list-item">
                   {features.map((feature, index) => (
                     <li key={index}>{feature.text}</li>
                   ))}
-                </ul>
-                <div className="d-inline-flex align-items-center mt-35 lg-mt-20">
+                </ul> */}
+                {/* <div className="d-inline-flex align-items-center mt-35 lg-mt-20">
                   <ul className="d-flex style-none rating">{starRating}</ul>
                   <div className="fs-20 ms-2">
                     <strong className="fw-500 tx-dark">4</strong>
@@ -136,14 +147,22 @@ const OurStory = () => {
                       (a few recent reviews)
                     </span>
                   </div>
-                </div>
+                </div> */}
               </div>
+            </div>
+            <div className="col-lg-6 flex-row-center" style={{ minHeight: "260px" }}>
+              <img
+                src="/images/media/allprods.png"
+                alt="shape"
+                className="lazy-img shapes shape-two"
+                style={{ height: "250px" }}
+              />
             </div>
             {/* End .col */}
 
-            <div className="col-xxl-5 col-lg-6 ms-auto">
+            {/* <div className="col-xxl-5 col-lg-6 ms-auto">
               <Block />
-            </div>
+            </div> */}
             {/* End .col */}
           </div>
         </div>
@@ -215,7 +234,9 @@ const OurStory = () => {
       >
         <div className="container">
           <div className="title-style-one text-center mb-50 lg-mb-20">
-            <h2 className="main-title fw-500 tx-dark m0">What Other's Think of Hawa</h2>
+            <h2 className="main-title fw-500 tx-dark m0">
+              What Other's Think of Hawa
+            </h2>
           </div>
         </div>
         {/* End .container */}

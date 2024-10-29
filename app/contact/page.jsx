@@ -5,7 +5,7 @@ import Header from "@/components/home-page/home-10/Header";
 export const metadata = {
   title: "Contact - The Hawa Collective",
 };
-const ContactV2 = () => {
+const Contact = () => {
   return (
     <>
       {/* <!-- 
@@ -98,4 +98,4 @@ const ContactV2 = () => {
   );
 };
 
-export default ContactV2;
+export default Contact;
