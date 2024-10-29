@@ -37,7 +37,7 @@ export default function Introduction({ handleNext }) {
         <Image
           priority
           src="/images/favicon/icon.png"
-          alt="logo"
+          alt="favicon"
           width={100}
           height={100}
         />

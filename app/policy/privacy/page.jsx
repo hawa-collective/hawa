@@ -29,7 +29,7 @@ const Privacy = () => {
                 Privacy Policy
               </h2>
               <h6 className="font_futurabook ls-05 text-uppercase text-bold">
-                Effective 8/27/2024
+                Effective 30th October 2024
               </h6>
             </div>
           </div>
@@ -48,33 +48,35 @@ const Privacy = () => {
                         1. Introduction
                       </h2>
                       <p>
-                        The Welcome to the Hawa Collective ("we," "our," or
-                        "us"). This Privacy Policy explains how we collect, use,
+                        Welcome to the Hawa Collective ("we," "our," or "us").
+                        This Privacy Policy explains how we collect, use,
                         disclose, and protect your personal information when you
-                        use our web application (the "Website") at{" "}
+                        use our web application (the "App") at{" "}
                         <a
                           href="https://thehawacollective.org"
                           target="_blank"
                           className="red-text"
+                          style={{ textDecoration: "underline" }}
                         >
                           thehawacollective.org
                         </a>
-                        . Hawa Collective is a non-governmental organization
+                        . The Hawa Collective is a limited liability partnership
                         based in Kenya, dedicated to educating the public on
                         sanitary health. We are committed to protecting your
                         privacy and ensuring that your personal data is handled
-                        in compliance with Kenyan Privacy Laws. By accessing or
-                        using our App, you agree to the collection and use of
-                        your information in accordance with this Privacy Policy.
-                        If you do not agree with the terms of this policy,
-                        please do not use our App.
+                        in compliance with Kenyan Privacy Laws and global best
+                        practice standards. By accessing or using our App, you
+                        agree to the collection and use of your information in
+                        accordance with this Privacy Policy. If you do not agree
+                        with the terms of this policy, please do not use our
+                        App.
                       </p>
                     </div>
                     <div className="my-4 text-dark">
                       <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         2. Information We Collect
                       </h2>
-                      <p>
+                      <p className="text-bold">
                         To provide you with a personalized experience and access
                         to our App, we collect the following personal
                         information:
@@ -87,12 +89,20 @@ const Privacy = () => {
                         <li>
                           <strong>Country:</strong> To understand sanitary
                           products used in your country and provide relevant
-                          information.
+                          information to both you and other users of our App on
+                          the products and rating available in various
+                          countries.
                         </li>
                         <li>
                           <strong>Product Ratings:</strong> To gather insights
-                          on your preferred sanitary products based on your
-                          experiences and ratings.
+                          on preferred sanitary products based on our users
+                          experiences and ratings, and provide anonymized
+                          information on sanitary product preference to users.
+                        </li>
+                        <li>
+                          We are also legally required to document the personal
+                          data in financial transactions when paying or
+                          receiving payment for delivery of goods and services.
                         </li>
                       </ul>
                     </div>
@@ -100,7 +110,7 @@ const Privacy = () => {
                       <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         3. How We Use Your Information
                       </h2>
-                      <p>
+                      <p className="text-bold">
                         The personal information we collect is used for the
                         following purposes:
                       </p>
@@ -117,7 +127,7 @@ const Privacy = () => {
                         </li>
                         <li>
                           <strong>Insights and Education:</strong> To compile
-                          and share useful insights that guide menstrual health,
+                          and share useful insights that guide sanitary health,
                           based on aggregated user data.
                         </li>
                         <li>
@@ -128,11 +138,129 @@ const Privacy = () => {
                         </li>
                       </ul>
                     </div>
+                    <div className="mt-2 mb-4 text-dark">
+                      <p className="text-bold">
+                        Our legal bases for using your personal data for the
+                        specified purposes are:
+                      </p>
+                      <ul>
+                        <li>
+                          our legitimate interest in offering you a secure App
+                          that effectively presents relevant content to you, or
+                        </li>
+                        <li>
+                          your freely given consent when you (1) choose to
+                          disclose your personal data to us and signing up as a
+                          user of our App, (2) allow us to use your personal
+                          data to improve our App, and (3) when you allow our
+                          App to access and utilize your device’s camera and
+                          images, or
+                        </li>
+                        <li>
+                          personal data collected for performance of any
+                          contractual obligations.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="my-4 text-dark">
+                      <p className="text-bold">
+                        If you contact us, we use personal data about you in
+                        order to document quality and compliance (for instance
+                        in relation to statutes of limitations, security,
+                        litigation, or regulatory investigations) where either:
+                      </p>
+                      <ul>
+                        <li>
+                          our legitimate interest in improving our legal
+                          position overrides your interest in the information
+                          not being used, or
+                        </li>
+                        <li>
+                          your freely given consent when you choose to disclose
+                          your personal data to us.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="my-4 text-dark">
+                      <p className="text-bold">If you:</p>
+                      <ul>
+                        <li>are a customer of ours; or</li>
+                        <li>visit our Apps, incl. social media; or</li>
+                        <li>use of App; or</li>
+                        <li>sign up for one of our newsletters.</li>
+                      </ul>
+                      <p className="text-bold">
+                        you will receive information, notifications,
+                        newsletters, offers, or similar, depending on our
+                        relationship and your personal preferences.
+                      </p>
+                    </div>
+                    <div className="my-4 text-dark">
+                      <p className="text-bold">
+                        Depending on our relationship, we use:
+                      </p>
+                      <ul>
+                        <li>
+                          Contact information (e.g., name, address, email, and
+                          phone number)
+                        </li>
+                        <li>
+                          Content and your choices in relation to newsletters –
+                          contact forms and content etc.
+                        </li>
+                        <li>Your personalized settings in our App</li>
+                      </ul>
+                      <div className="my-4 text-dark">
+                        <p className="text-bold">
+                          The marketing in newsletters, in any of our
+                          applications, and on our Apps, including social media,
+                          is adapted based on our relationship and your personal
+                          preferences based on our knowledge of you through
+                          profiling, which includes the use of:
+                        </p>
+                        <ul>
+                          <li>Content of newsletters signed up to</li>
+                          <li>Stated areas of interest</li>
+                          <li>
+                            Cookies as laid out in our{" "}
+                            <a href="/policy/cookie" target="_blank">
+                              Cookie Policy
+                            </a>
+                          </li>
+                          <li>Information from your social media profiles</li>
+                          <li>Information from our customer databases</li>
+                          <li>
+                            Information from our Apps, incl. how you use these
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="my-4 text-dark">
+                        <p className="text-bold">Either:</p>
+                        <ul>
+                          <li>
+                            your freely given consent when you choose to
+                            disclose your personal data to us, or
+                          </li>
+                          <li>
+                            personal data collected for performance of any
+                            contractual obligations,
+                          </li>
+                        </ul>
+                        <p>
+                          provides the legal bases for our use of your personal
+                          data in relation to marketing activities.
+                        </p>
+                        <p>
+                          We do not use automated decisions that have a legal
+                          effect or similarly significantly affect you.
+                        </p>
+                      </div>
+                    </div>
                     <div className="my-4 text-dark">
                       <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         4. Data Sharing and Disclosure
                       </h2>
-                      <p>
+                      <p className="text-bold">
                         We respect your privacy and do not sell your personal
                         information to third parties. We may, however, share
                         your information in the following circumstances:
@@ -142,9 +270,12 @@ const Privacy = () => {
                           <strong>With Third-Party Service Providers:</strong>{" "}
                           We use third-party applications to enhance our
                           services, which may collect user data such as email
-                          addresses. These providers are obligated to protect
-                          your information and use it solely for the purpose of
-                          providing services to us.
+                          addresses. We may also share your data with our
+                          business partners to enhance the quality of your
+                          experience with the services we provide. These
+                          providers are obligated to protect your information
+                          and use it solely for the purpose of providing
+                          services to us.
                         </li>
                         <li>
                           <strong>Legal Compliance:</strong> We may disclose
@@ -159,17 +290,19 @@ const Privacy = () => {
                       <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         5. User Rights and Data Access
                       </h2>
-                      <p>As a user, you have the right to:</p>
+                      <p className="text-bold">
+                        As a user, you have the right to:
+                      </p>
                       <ul>
                         <li>
-                          <strong>With Third-Party Service Providers:</strong>{" "}
-                          You may request a copy of your personal data by
-                          contacting us at{" "}
+                          With Third-Party Service Providers: You may request a
+                          copy of your personal data by contacting us at{" "}
                           <a
                             className="red-text"
-                            href="mailto:admin@thehawacollective.com"
+                            href="mailto:contact@thehawacollective.com"
+                            style={{ textDecoration: "underline" }}
                           >
-                            admin@thehawacollective.com
+                            contact@thehawacollective.com
                           </a>
                           . Our technical team will process your request within
                           5-10 business days.
@@ -207,6 +340,7 @@ const Privacy = () => {
                           href="/policy/cookie"
                           target="_blank"
                           className="red-text"
+                          style={{ textDecoration: "underline" }}
                         >
                           Cookie Policy
                         </a>
@@ -218,17 +352,53 @@ const Privacy = () => {
                         8. Third-Party Websites
                       </h2>
                       <p>
-                        Our App may contain links to third-party websites or
-                        services that are not owned or controlled by Hawa
+                        Our App may contain links to third-party websites/ apps
+                        or services that are not owned or controlled by Hawa
                         Collective. We are not responsible for the privacy
-                        practices of these third-party websites. We encourage
-                        you to read the privacy policies of any third-party
-                        websites you visit.
+                        practices of these third-party websites/ apps. We
+                        encourage you to read the privacy policies of any
+                        third-party websites/apps you visit.
                       </p>
                     </div>
                     <div className="my-4 text-dark">
                       <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
-                        9. Changes to This Privacy Policy
+                        9. Data Retention
+                      </h2>
+                      <p className="text-bold">
+                        We store your personal data for as long as it is
+                        necessary to fulfil the purpose of the use, unless we
+                        are obliged under applicable laws and regulations or are
+                        entitled to store the personal data for a longer period,
+                        more specifically:
+                      </p>
+                      <ul>
+                        <li>
+                          We retain your personal data as long as we have an
+                          ongoing relationship with you (in particular, if you
+                          have an account with us or have not withdrawn your
+                          marketing consent).
+                        </li>
+                        <li>
+                          We will only keep the personal data while your account
+                          is active or for as long as needed to provide services
+                          to you.
+                        </li>
+                        <li>
+                          We retain your personal data for as long as needed in
+                          order to comply with our global legal and contractual
+                          obligations.
+                        </li>
+                        <li>
+                          We will also retain your Personal Data where this is
+                          advisable to safeguard or improve our legal position
+                          (for instance in relation to statutes of limitations,
+                          security, litigation, or regulatory investigations).
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="my-4 text-dark">
+                      <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
+                        10. Changes to This Privacy Policy
                       </h2>
                       <p>
                         We may update this Privacy Policy from time to time to
@@ -238,34 +408,34 @@ const Privacy = () => {
                         Privacy Policy on our App and updating the "Effective
                         Date" at the top of this page. We encourage you to
                         review this Privacy Policy periodically to stay informed
-                        about how we are protecting your information.
+                        about how we are protecting your information
                       </p>
                     </div>
                     <div className="my-4 text-dark">
                       <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
-                        10. Contact Us
+                        11. Contact Us
                       </h2>
                       <p>
                         If you have any questions or concerns about this Privacy
                         Policy or our data practices, please contact us at:
                         <br />
                         <br />
-                        Hawa Collective
+                        <strong>Hawa Collective</strong>
                         <br />
-                        Email:{" "}
-                        <a
+                        <strong>Email:</strong>{" "}
+                        <strong><a
                           className="red-text"
-                          href="mailto:admin@thehawacollective.com"
+                          href="mailto:contact@thehawacollective.com"
                         >
-                          admin@thehawacollective.com
-                        </a>
+                          contact@thehawacollective.com
+                        </a></strong>
                       </p>
                     </div>
                     <div className="my-4 text-dark">
                       <p>
-                        Thank you for using Hawa. We are committed to
-                        protecting your privacy and providing a meaningful
-                        experience through our Website/App.
+                        Thank you for using Hawa. We are committed to protecting
+                        your privacy and providing a meaningful experience
+                        through our App.
                       </p>
                     </div>
                   </div>

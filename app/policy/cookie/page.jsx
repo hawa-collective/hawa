@@ -29,7 +29,7 @@ const Cookie = () => {
                 Cookie Policy
               </h2>
               <h6 className="font_futurabook ls-05 text-uppercase text-bold">
-                Effective 8/27/2024
+                Effective 30th October 2024
               </h6>
             </div>
           </div>
@@ -72,7 +72,7 @@ const Cookie = () => {
                       <h2 className="font_futurabook text-uppercase text-bold med_link_font ls-05">
                         3. How We Use Cookies
                       </h2>
-                      <p>
+                      <p className="text-bold">
                         We use cookies that are essential for the functioning of
                         our App and to enhance your experience. These cookies
                         help us:
@@ -82,7 +82,8 @@ const Cookie = () => {
                           <strong>Personalize Your Experience:</strong> By
                           remembering your preferences and settings, we can
                           provide content that is relevant to your location and
-                          interests.
+                          interests and ensuring that any advertisements you see
+                          online are more relevant to you and your interests.
                         </li>
                         <li>
                           <strong>Provide Relevant Data:</strong> We use cookies
@@ -108,7 +109,7 @@ const Cookie = () => {
                           <strong>Analytics Cookies:</strong> We use these
                           cookies to collect data about how users interact with
                           our App. This information helps us understand user
-                          behavior, improve our services, and provide insights
+                          behaviour, improve our services, and provide insights
                           on sanitary health products. The data collected by
                           these cookies is aggregated and anonymous, ensuring
                           your privacy is protected.
@@ -123,8 +124,13 @@ const Cookie = () => {
                         Most web browsers automatically accept cookies, but you
                         can modify your browser settings to decline cookies or
                         alert you when a cookie is being placed on your device.
-                        However, please note that if you disable cookies, some
-                        features of our App may not function as intended.
+                        However, please note that deleting and blocking cookies
+                        may have an impact on your user experience as parts of
+                        the site may no longer work. Unless you have adjusted
+                        your browser settings to block cookies, our App may
+                        issue cookies as soon as you visit our site or click on
+                        a link in a targeted email that we have sent you, even
+                        if you have previously deleted our cookies.
                       </p>
                     </div>
                     <div className="mb-4 text-dark">
@@ -145,26 +151,19 @@ const Cookie = () => {
                       </h2>
                       <p>
                         If you have any questions or concerns about this Cookie
-                        Policy or how we use cookies on our App, please contact
-                        us at:
+                        Policy or how we use cookies on our website, please
+                        contact us at:
                         <br />
                         <br />
-                        Hawa Collective
+                        <strong>Hawa Collective</strong>
                         <br />
-                        Email:{" "}
+                        <strong>Email:</strong>{" "}
                         <a
                           className="red-text"
                           href="mailto:admin@thehawacollective.com"
                         >
                           admin@thehawacollective.com
                         </a>
-                      </p>
-                    </div>
-                    <div className="my-4 text-dark">
-                      <p>
-                        Thank you for using Hawa. We are committed to
-                        protecting your privacy and providing a meaningful
-                        experience through our Website/App.
                       </p>
                     </div>
                   </div>

@@ -47,12 +47,12 @@ const OurStory = () => {
           <div className="row">
             <div className="col-lg-7" data-aos="fade-right">
               <div className="title-style-five mb-65 md-mb-40">
-                <div className="sc-title-two fst-italic position-relative">
-                  Our Mission.
+                <div className="sc-title-two fst-italic position-relative" style={{ fontSize: "21px" }}>
+                  Our Mission
                 </div>
                 <h2
-                  className="main-title mobile_h2 fw-500 tx-dark"
-                  style={{ letterSpacing: "0.09rem", fontSize: "37px" }}
+                  className="main-title mobile_h2 fw-500 tx-dark text-bold"
+                  style={{ letterSpacing: "0.1rem", fontSize: "37px" }}
                 >
                   We are your one stop shop for reproductive health information.
                 </h2>
@@ -65,8 +65,8 @@ const OurStory = () => {
               <div className="ps-xxl-5" data-aos="fade-left">
                 <h6 className="mb-30 font_futurabook">Our Story</h6>
                 <h2
-                  className="main-title fw-500 tx-dark font_futurabook"
-                  style={{ fontSize: "24px" }}
+                  className="main-title font_futurabook"
+                  style={{ fontSize: "24px", fontWeight: "100" }}
                 >
                   Our goal is to educate on reproductive health and give a voice
                   to menstruators on the menstrual products that work for them.
@@ -124,7 +124,7 @@ const OurStory = () => {
                 <div className="title-style-six">
                   <div className="sc-title-two text-uppercase">WHY HAWA?</div>
                   <h2
-                    className="main-title fw-500 tx-dark font_futurabook"
+                    className="main-title fw-500 font_futurabook"
                     style={{ fontSize: "24px" }}
                   >
                     Everything you've ever needed to know when choosing a
@@ -244,7 +244,7 @@ const OurStory = () => {
       >
         <div className="container">
           <div className="title-style-one text-center mb-50 lg-mb-20">
-            <h2 className="main-title fw-500 tx-dark m0">
+            <h2 className="main-title fw-500 tx-dark text-bold m0">
               What Other's Think of Hawa
             </h2>
           </div>

@@ -74,9 +74,9 @@ const HawaCollective = () => {
               </div> */}
               {/* /.title-style-one */}
             </div>
-            <div className="col-lg-5 ms-auto" data-aos="fade-left">
+            <div className="col-lg-6 ms-auto" data-aos="fade-left">
               <div className="title-style-one text-center text-lg-start">
-                <h2 className="main-title fw-bold tx-dark m0">
+                <h2 className="main-title fw-bold tx-dark m0" style={{ letterSpacing: "0.1rem" }}>
                   Making Sanitary Products easy to <span>choose</span>.
                 </h2>
               </div>
