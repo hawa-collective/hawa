@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 // import Blog from "@/components/home-page/home-10/Blog";
-import FancyBlock from "@/components/home-page/home-10/FancyBlock";
-import FancyBlock2 from "@/components/home-page/home-10/FancyBlock2";
+// import FancyBlock from "@/components/home-page/home-10/FancyBlock";
+// import FancyBlock2 from "@/components/home-page/home-10/FancyBlock2";
 import Header from "@/components/home-page/home-10/Header";
 import Hero from "@/components/home-page/home-10/Hero";
-import OurAim from "@/components/home-page/home-10/OurAim";
+// import OurAim from "@/components/home-page/home-10/OurAim";
 import Blog from "@/components/home-page/home-5/Blog";
 import Services from "@/components/home-page/home-10/Services";
-import Testimonial from "@/components/home-page/home-10/Testimonial";
+// import Testimonial from "@/components/home-page/home-10/Testimonial";
 import FancyBanner from "@/components/home-page/home-10/FancyBanner";
 import CallToActions from "@/components/home-page/home-10/CallToActions";
 import Footer from "@/components/home-page/home-10/Footer";

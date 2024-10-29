@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import {
-  menuItems,
-  pagesItems,
-  portfolioItems,
-  blogItems,
-  contactItems,
-} from "@/data/menu";
+// import {
+//   menuItems,
+//   pagesItems,
+//   portfolioItems,
+//   blogItems,
+//   contactItems,
+// } from "@/data/menu";
 
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -15,9 +15,9 @@ import { usePathname } from "next/navigation";
 const MainMenu = () => {
   const pathname = usePathname();
 
-  const isActive = (link) => {
-    return pathname.replace(/\/\d+$/, "") === link.replace(/\/\d+$/, "");
-  };
+  // const isActive = (link) => {
+  //   return pathname.replace(/\/\d+$/, "") === link.replace(/\/\d+$/, "");
+  // };
 
   return (
     <nav className="navbar navbar-expand-lg order-lg-2">
@@ -171,7 +171,7 @@ const MainMenu = () => {
               //     ? "nav-link dropdown-toggle active-menu"
               //     : "nav-link dropdown-toggle"
               // }
-              href="/pages-menu/about-us-v1"
+              href="/our-story"
             >
               Our Story
             </a>
