@@ -22,13 +22,13 @@ const ProductType = ({
     }
   }, []);
 
-  const handleContinueClick = () => {
-    if (!productType) {
-      setError(true); // Show error if no product type is selected
-    } else {
-      handleNext("specific");
-    }
-  };
+  // const handleContinueClick = () => {
+  //   if (!productType) {
+  //     setError(true); // Show error if no product type is selected
+  //   } else {
+  //     handleNext("specific");
+  //   }
+  // };
 
   const optionOneTwo = [
     <Button
@@ -185,7 +185,7 @@ const ProductType = ({
         <button
         className="mt-3 tran3s button-primary ripple-btn fw-500"
         onClick={() => handleNext("specific")}
-        style={{ backgroundColor: "#000000" }}
+        style={{ backgroundColor: "#8D447F" }}
       >
         CONTINUE
       </button>

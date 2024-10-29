@@ -209,7 +209,7 @@ export default function Comment({ Brand, handleNext }) {
         <button
           className="mt-3 tran3s button-primary ripple-btn fw-500"
           type="submit" // Use "submit" type for form submission
-          style={{ backgroundColor: "#000000" }}
+          style={{ backgroundColor: "#8D447F" }}
         >
           FINISH
         </button>

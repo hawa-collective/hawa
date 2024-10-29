@@ -38,11 +38,6 @@ function Survey() {
           {/* Navigation end */}
           <div className="form-wrapper position-relative m-auto">
             <div className="text-center">
-              {/* <h2 className="tx-dark mb-30 lg-mb-10">Quick Survey</h2>
-              <p className="fs-20 tx-dark">
-                This survey should only take 2mins of your time<br />
-                <Link href="/signup">Start Survey</Link>
-              </p> */}
               <Stepper />
             </div>
           </div>

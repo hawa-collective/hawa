@@ -7,6 +7,14 @@ const CallToActions = () => {
       <div className="container">
         <div className="bg-wrapper position-relative" data-aos="fade-up">
           <div className="shapes shape-one" />
+          <div className="shapes shape-one">
+            <img
+              src="/images/media/powerperiod.png"
+              alt="icon"
+              className="lazy-img"
+              style={{ height: "100px" }}
+            />
+          </div>
           <div className="inner-wrapper">
             <div className="subscribe-area">
               <div className="row align-items-end form-padding">

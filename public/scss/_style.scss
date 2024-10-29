@@ -12,6 +12,10 @@
 
 
 ==========================================================================================*/
+// No Padding
+.padding_none {
+  padding: none !important;
+}
 .product_details_drawer p {
   font-family: "futurabook";
   font-size: 17px;
@@ -64,7 +68,7 @@
   font-size: 14px;
 }
 .red-text {
-  color: #600c00;
+  color: #8D447F;
 }
 .red-text:hover {
   color: #28244a;
@@ -80,32 +84,58 @@
   font-weight: bold !important;
 }
 .icon-box-shadow {
-  border: 1px solid #600c00 !important;
-  border-radius: 3px !important; /* Rounded corners */
+  border: 1px solid #8D447F !important;
+  border-radius: 3px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1) !important; /* Dark shadow with a gentle glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Smooth hover effect */
 }
 // Card border
+.survey-card {
+  border-radius: 10px !important;
+}
 .floating-card {
   background-color: white !important;
-  border: 1px solid #600c00 !important;
-  border-radius: 3px !important; /* Rounded corners */
+  border: 1px solid #8D447F !important;
+  border-radius: 10px !important;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1) !important; /* Dark shadow with a gentle glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Smooth hover effect */
 }
-
+.ratecard {
+  background-color: white !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1) !important; /* Dark shadow with a gentle glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Smooth hover effect */
+}
+// RateProduct box styles
+.mui-1dd29tr-MuiRating-root .MuiRating-iconEmpty .MuiSvgIcon-root {
+  color: #8D447F !important;
+  border-radius: 13px !important;
+  padding: 5px !important;
+}
+// Ratings 1 and 2
+.mui-17wwx8e-MuiSvgIcon-root {
+  color: #ec3c86 !important;
+}
+// Rating 3
+.mui-hm12pu-MuiSvgIcon-root {
+  color: #ec3c86 !important;
+}
+// Rating 4 and 5
+.mui-1po4ruo-MuiSvgIcon-root {
+  color: #ec3c86 !important;
+}
 .floating-card:active {
   transform: translateY(-5px) !important; /* Slight lift on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2) !important; /* Enhanced shadow on hover */
 }
 .floating-card:focus {
-  border: 1px solid #600c00 !important;
+  border: 1px solid #8D447F !important;
 }
 
 .selected-card {
-  border: 1px solid #600c00 !important;
+  border: 1px solid #8D447F !important;
   border-radius: 7px !important;
-  box-shadow: 1px 1px 1px #600c00 !important;
+  box-shadow: 1px 1px 1px #8D447F !important;
 }
 // Changes the Brand name input text to left aligned
 .mui-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.mui-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.mui-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input {
@@ -131,6 +161,10 @@
 }
 .mui-igs3ac {
   border: none !important;
+}
+// No survey body padding
+.mui-46bh2p-MuiCardContent-root {
+  padding: 0 !important;
 }
 // Increases width of survey progress bar
 .mui-19hbg91-MuiLinearProgress-root-MuiMobileStepper-progress {
@@ -296,18 +330,19 @@
 :root {
   --text-color: #48494e;
   --heading: #090f32;
-  --prime-one: #600c00;
-  --prime-two: #600c00;
+  --prime-one: #817fe2;
+  --prime-two: #817fe2;
   --prime-three: #6a45ff;
   --prime-four: #ffcd45;
   --prime-five: #007bff;
   --prime-six: #ffd338;
   --prime-seven: linear-gradient(-90deg, #ff7df2 0%, #ff275b 100%);
   --prime-eight: #ffed4e;
-  --prime-nine: #600c00;
-  --prime-ten: #600c00;
+  --prime-nine: #817fe2;
+  --prime-ten: #817fe2;
   --prime-eleven: #ffce4c;
   --prime-twelve: #ffe500;
+  --prime-dark: #000000;
 }
 ::selection {
   background-color: #2a2a2a;
@@ -1571,7 +1606,7 @@ body .btn-twentySix:hover:after {
 .theme-main-menu .login-btn-three {
   width: 55px;
   height: 55px;
-  border: 1px solid #600c00;
+  border: 1px solid var(--prime-one);
   text-align: center;
   line-height: 53px;
   color: var(--prime-ten);
@@ -1989,9 +2024,15 @@ body .btn-twentySix:hover:after {
 }
 .hero-banner-one .bg-wrapper {
   // background: rgb(252,252,252) !important;
-  // background: linear-gradient(0deg, rgba(252,252,252,1) 7%, rgba(255,255,255,1) 15%, rgba(255,249,250,1) 21%, rgba(245,23,32,1) 100%) !important;
-  background-color: #f5fff5;
-  background-image: url(../images/assets/bg-1.png);
+  background: rgb(206, 202, 255);
+  background: rgb(250, 182, 199);
+  background: rgb(166,146,253);
+background: -moz-linear-gradient(180deg, rgba(166,146,253,0.5) 0%, rgba(255,255,255,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(166,146,253,0.5) 0%, rgba(255,255,255,1) 100%);
+background: linear-gradient(180deg, rgba(166,146,253,0.5) 0%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a692fd",endColorstr="#ffffff",GradientType=1);
+  // background-color: rgba(127, 17, 224, 0.1);
+  // background-image: url(../images/assets/bg-1.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 240px 0 140px;
@@ -2074,12 +2115,12 @@ body .btn-twentySix:hover:after {
   animation: jumpTwo 3.5s infinite linear;
 }
 .hero-banner-one .illustration-holder .shape-three {
-  left: -6%;
+  left: 1%;
   top: 52%;
   animation: jumpThree 3.5s infinite linear;
 }
 .hero-banner-one .illustration-holder .shape-four {
-  right: -4%;
+  right: 1%;
   top: 50%;
   animation: jumpThree 3.5s infinite linear;
 }
@@ -2095,10 +2136,10 @@ body .btn-twentySix:hover:after {
   animation: jumpFour 3.5s infinite linear;
 }
 .hero-banner-one .illustration-holder .shape-seven {
-  top: 14%;
-  right: 0%;
-  width: 11.6%;
-  animation: jumpFive 3.5s infinite linear;
+  top: -10%;
+  right: 5%;
+  width: 27%;
+  animation: jumpFive 5.5s infinite linear;
 }
 .hero-banner-one .shape-eight {
   left: 10%;
@@ -2111,7 +2152,7 @@ body .btn-twentySix:hover:after {
   right: 3%;
   width: 300px;
   border-radius: 12px;
-  box-shadow: 0px 30px 80px rgba(0, 40, 100, 0.0520002);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   padding: 25px 10px 20px 85px;
   z-index: 2;
 }
@@ -2122,7 +2163,7 @@ body .btn-twentySix:hover:after {
   text-align: center;
   left: 20px;
   top: 30px;
-  background: #8e44ff;
+  background: #817fe2;
 }
 .hero-banner-one .card-one h6 {
   line-height: 1.35em;
@@ -2438,7 +2479,13 @@ body .btn-twentySix:hover:after {
 }
 /*^^^^^^^^^^^^^^^^^^^^^ Blog Section One ^^^^^^^^^^^^^^^^^^^^^^^^*/
 .blog-section-one .bg-wrapper {
-  background-color: #e8faf3;
+  // background-color: #fab6c7;
+  background: rgb(206, 202, 255);
+  background: rgb(250,182,199);
+background: -moz-linear-gradient(180deg, rgba(250,182,199,0.5) 0%, rgba(255,255,255,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(250,182,199,0.5) 0%, rgba(255,255,255,1) 100%);
+background: linear-gradient(180deg, rgba(250,182,199,0.5) 0%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fab6c7",endColorstr="#ffffff",GradientType=1);
   z-index: 1;
 }
 .blog-section-one .shape-one {
@@ -2448,22 +2495,19 @@ body .btn-twentySix:hover:after {
   border-radius: 9px;
   right: 12%;
   top: -2%;
-  animation: rotated 30s infinite linear;
+  // animation: rotated 30s infinite linear;
 }
 .blog-section-one .shape-two {
   bottom: -6%;
   right: 11%;
   z-index: 0;
-  animation: jumpTwo 3.2s infinite linear;
+  // animation: jumpTwo 3.2s infinite linear;
 }
 .blog-section-one .shape-three {
-  width: 70px;
-  height: 70px;
-  background: #ff8c24;
-  border-radius: 13px;
+  width: auto;
   left: 11%;
   bottom: -3%;
-  animation: rotated 35s infinite linear;
+  // animation: jumpTwo 3.2s infinite linear;
 }
 .blog-meta-one {
   background: #fff;
@@ -2536,13 +2580,10 @@ body .btn-twentySix:hover:after {
   color: #979797;
 }
 .fancy-short-banner-one .shape-one {
-  width: 60px;
-  height: 60px;
-  background: #17bd37;
-  border-radius: 13px;
+  width: auto;
   right: -2%;
   top: -9%;
-  animation: rotated 30s infinite linear;
+  // animation: rotated 30s infinite linear;
 }
 /*^^^^^^^^^^^^^^^^^^^^^ Footer One ^^^^^^^^^^^^^^^^^^^^^^^^*/
 .footer-style-one {
@@ -4188,7 +4229,7 @@ body .btn-twentySix:hover:after {
 }
 .hero-banner-four .shape-three {
   bottom: -3%;
-  left: 15%;
+  left: 25%;
   animation: jumpFour 4s infinite linear;
 }
 .hero-banner-four .shape-four {

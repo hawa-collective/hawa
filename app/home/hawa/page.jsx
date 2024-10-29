@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 // import Blog from "@/components/home-page/home-10/Blog";
@@ -86,7 +85,7 @@ const HawaCollective = () => {
                 eradicating sanitary health poverty.
               </p>
               <br />
-              <div className="flex_centered_mobile">
+              <div className="flex_centered_mobile text-centre flex-row-center">
                 <button className="tran3s position-absolute text-centre button-primary btn-one fw-500">
                   OUR STORY
                 </button>
@@ -179,11 +178,19 @@ const HawaCollective = () => {
         <div className="bg-wrapper pt-140 pb-170 lg-pt-100 lg-pb-100 position-relative">
           <div className="shapes shape-one" />
           <img
-            src="/images/shape/shape_16.svg"
+            src="/images/media/allprods.png"
             alt="icon"
             className="lazy-img shapes shape-two"
+            style={{ height: "177px" }}
           />
-          <div className="shapes shape-three" />
+          <div className="shapes shape-three">
+            <img
+              src="/images/media/heartsfill.png"
+              alt="icon"
+              className="lazy-img"
+              style={{ height: "177px" }}
+            />
+          </div>
 
           <div className="container">
             <div className="row align-items-center">

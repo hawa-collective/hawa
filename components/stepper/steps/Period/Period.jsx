@@ -24,6 +24,7 @@ export default function Period({ handleNext }) {
     setPeriod(selectedPeriod);
     sessionStorage.setItem("period", selectedPeriod);
     setError(false); // Clear error when a valid option is selected
+    handleNext("type");
   };
 
   const handleContinueClick = () => {
@@ -139,7 +140,7 @@ export default function Period({ handleNext }) {
         <button
         className="mt-3 tran3s button-primary ripple-btn fw-500"
         onClick={() => handleNext("type")}
-        style={{ backgroundColor: "#000000" }}
+        style={{ backgroundColor: "#8D447F" }}
       >
         CONTINUE
       </button>

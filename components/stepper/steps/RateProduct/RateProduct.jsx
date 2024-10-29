@@ -49,12 +49,11 @@ export default function RateProduct({
         <div className="height-15"></div>
       </div>
       <div>
-        <div className="flex-col-center mb-35 floating-card my-3 br-4">
+        <div className="flex-col-center mb-35 ratecard my-3 br-4">
           <div className="px-3 pt-2">
             <h4 className="font_futurabook fw-bold fw-bold">Affordability</h4>
           </div>
-          <div style={{ border: "1px dotted #1c1c1c", width: "100%" }}></div>
-          <div className="px-3 py-2" style={{ backgroundColor: "#600c00" }}>
+          <div className="px-3 pb-4" style={{ marginTop: "-20px" }}>
             <ProductRater
               productType={productType}
               setProductType={setProductType}
@@ -64,34 +63,32 @@ export default function RateProduct({
             />
           </div>
         </div>
-        <div className="flex-col-center mb-35 floating-card my-3 br-4">
+        <div className="flex-col-center mb-35 ratecard my-3 br-4">
           <div className="px-3 pt-2">
             <h4 className="font_futurabook fw-bold">Ease of Use</h4>
           </div>
-          <div style={{ border: "1px dotted #1c1c1c", width: "100%" }}></div>
-          <div className="px-3 py-2" style={{ backgroundColor: "#600c00" }}>
-          <ProductRater
-            productType={productType}
-            setProductType={setProductType}
-            factorName="ease"
-            onRatingChange={handleRatingChange}
-            rating={ratings.ease}
-          />
+          <div className="px-3 pb-4" style={{ marginTop: "-20px" }}>
+            <ProductRater
+              productType={productType}
+              setProductType={setProductType}
+              factorName="ease"
+              onRatingChange={handleRatingChange}
+              rating={ratings.ease}
+            />
           </div>
         </div>
-        <div className="flex-col-center mb-35 floating-card my-3 br-4">
+        <div className="flex-col-center mb-35 ratecard my-3 br-4">
           <div className="px-3 pt-2">
             <h4 className="font_futurabook fw-bold">Comfort</h4>
           </div>
-          <div style={{ border: "1px dotted #1c1c1c", width: "100%" }}></div>
-          <div className="px-3 py-2" style={{ backgroundColor: "#600c00" }}>
-          <ProductRater
-            productType={productType}
-            setProductType={setProductType}
-            factorName="comfort"
-            onRatingChange={handleRatingChange}
-            rating={ratings.comfort}
-          />
+          <div className="px-3 pb-4" style={{ marginTop: "-20px" }}>
+            <ProductRater
+              productType={productType}
+              setProductType={setProductType}
+              factorName="comfort"
+              onRatingChange={handleRatingChange}
+              rating={ratings.comfort}
+            />
           </div>
         </div>
       </div>
@@ -99,7 +96,7 @@ export default function RateProduct({
         <button
           className="mt-3 tran3s button-primary ripple-btn fw-500"
           onClick={() => handleNext("heaviest")}
-          style={{ backgroundColor: "#000000" }}
+          style={{ backgroundColor: "#8D447F" }}
         >
           CONTINUE
         </button>

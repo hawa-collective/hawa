@@ -22,6 +22,7 @@ export default function HeaviestPads({ productType, handleNext }) {
   const handleProductUsage = (productUsageSelection) => {
     setProductUsage(productUsageSelection);
     sessionStorage.setItem("usage", productUsageSelection);
+    handleNext("comment");
   };
 
   return (
@@ -168,7 +169,7 @@ export default function HeaviestPads({ productType, handleNext }) {
         <button
           className="mt-3 tran3s button-primary ripple-btn fw-500"
           onClick={() => handleNext("comment")}
-          style={{ backgroundColor: "#000000" }}
+          style={{ backgroundColor: "#8D447F" }}
         >
           CONTINUE
         </button>

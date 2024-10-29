@@ -118,7 +118,7 @@ export default function CupAndDisk({ Brand, setBrand, handleNext }) {
           <button
             className="mt-3 tran3s button-primary ripple-btn fw-500"
             onClick={handleNextClick}
-            style={{ backgroundColor: "#000000" }}
+            style={{ backgroundColor: "#8D447F" }}
             disabled={!Brand} // Disable button if no brand is selected
           >
             CONTINUE

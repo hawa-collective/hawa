@@ -24,15 +24,16 @@ export default function Flow({ handleNext }) {
     setFlow(selectedFlow);
     sessionStorage.setItem("flow", selectedFlow);
     setError(false); // Clear error when a valid option is selected
+    handleNext("period")
   };
 
-  const handleContinueClick = () => {
-    if (!flow) {
-      setError(true); // Show error if no flow option is selected
-    } else {
-      handleNext("period");
-    }
-  };
+  // const handleContinueClick = () => {
+  //   if (!flow) {
+  //     setError(true); // Show error if no flow option is selected
+  //   } else {
+  //     handleNext("period");
+  //   }
+  // };
 
   return (
     <div className="fade-in-entry flex-col-center">
@@ -80,7 +81,7 @@ export default function Flow({ handleNext }) {
           </Box>
           <div className="flex-col-center p-2">
             <Image
-              src="/images/media/heavy-flow.png"
+              src="/images/media/heavy.png"
               alt="heavy flow icon"
               width={75}
               height={75}
@@ -124,7 +125,7 @@ export default function Flow({ handleNext }) {
           </Box>
           <div className="flex-col-center p-2">
             <Image
-              src="/images/media/light-flow.png"
+              src="/images/media/light.png"
               alt="light flow icon"
               width={75}
               height={75}
@@ -139,7 +140,7 @@ export default function Flow({ handleNext }) {
         <button
         className="mt-3 tran3s button-primary ripple-btn fw-500"
         onClick={() => handleNext("period")}
-        style={{ backgroundColor: "#000000" }}
+        style={{ backgroundColor: "#8D447F" }}
       >
         CONTINUE
       </button>

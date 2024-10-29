@@ -12,7 +12,7 @@
 }
 // Survey Title styles
 .survey-title {
-  font-size: 32px;
+  font-size: 21px;
   font-weight: 700;
   color: #000000;
 }
@@ -21,6 +21,10 @@
   .hide-large {
     display: none;
   }
+  // Questionnaire Width
+  .questionnaire_width {
+    min-width: 625px;
+   }
   .container {
     padding-right: 0;
     padding-left: 0;
@@ -2925,10 +2929,15 @@
   }
   // Survey Title styles
   .survey-title {
-    font-size: 27px;
+    font-size: 21px;
     font-weight: 700;
     color: #000000;
   }
+  // Questionnaire Width
+  .questionnaire_width {
+    min-width: 420px;
+    width: 500px;
+   }
   .fancy-feature-thirtySeven .block-one,
   .fancy-feature-thirtySeven .block-two,
   .fancy-feature-thirtySeven .block-three {
@@ -3122,3 +3131,10 @@
   }
 }
 /*(max-width: 575px)*/
+@media (max-width: 574px) {
+ // Questionnaire Width
+.questionnaire_width {
+  min-width: 320px;
+  width: 225px;
+ }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Introduction from "./introduction/introduction";
+import Name from "./Name/Name";
 import Location from "./location/Location";
 import Age from "./Age/Age";
 import Flow from "./FlowType/Flow";
@@ -17,20 +18,20 @@ function Steps({
   ProductTypeSelect,
   setProductType,
   productType,
-  activeStep,
   Brand,
   setBrand,
   ratings,
   setRatings,
-  handleBack,
   handleNext,
 }) {
   const rendersteps = (stepStatus, productType) => {
-    console.log("Step Status:", stepStatus, "\n", "Product Type:", productType);
+    console.log("Step Status:", stepStatus);
 
     switch (stepStatus) {
       case "introduction":
         return <Introduction handleNext={handleNext} />;
+      case "name":
+        return <Name handleNext={handleNext} />;
       case "location":
         return <Location handleNext={handleNext} />;
       case "age":
@@ -103,7 +104,11 @@ function Steps({
     }
   };
 
-  return <div>{rendersteps(stepStatus, productType)}</div>;
+  return (
+    <div className="questionnaire_width">
+      {rendersteps(stepStatus, productType)}
+    </div>
+  );
 }
 
 export default Steps;

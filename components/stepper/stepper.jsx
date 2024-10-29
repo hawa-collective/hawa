@@ -23,7 +23,7 @@ import Steps from "./steps/steps";
 //   "Brand name",
 //   "Brand comfort",
 // ];
-const steps = 10;
+const steps = 11;
 
 export default function HorizontalLinearStepper() {
   const theme = useTheme();
@@ -64,8 +64,11 @@ export default function HorizontalLinearStepper() {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
     switch (stepStatus) {
-      case "location":
+      case "name":
         setStepStatus("introduction");
+        break;
+      case "location":
+        setStepStatus("name");
         break;
       case "age":
         setStepStatus("location");
@@ -227,7 +230,10 @@ export default function HorizontalLinearStepper() {
         </Fragment>
       ) : (
         <>
-          <div className="flex-col-center" style={{ minHeight: "350px" }}>
+          <div
+            className="flex-col-center"
+            style={{ minHeight: "350px", minWidth: "325px" }}
+          >
             <div>
               {stepStatus !== "introduction" ? (
                 <Button onClick={handleReset}>Reset</Button>

@@ -1,23 +1,23 @@
-import Link from "next/link";
+import Image from "next/image";
 
 const servicesData = [
   {
     bgColor: "rgba(255, 171, 51, 0.18)",
-    iconSrc: "/images/assets/step1.png",
+    iconSrc: "/images/media/one.png",
     title: "Login to begin",
     description:
       "Login to view and rate sanitary products. You will be taken through a short survey for your first login - so that we know a little about you.",
   },
   {
     bgColor: "rgba(100, 219, 226, 0.18)",
-    iconSrc: "/images/assets/step2.png",
+    iconSrc: "/images/media/two.png",
     title: "Search for product",
     description:
       "You can search for rated products using their product types such as 'pad' or brand name such as 'always discreet pads'.",
   },
   {
     bgColor: "rgba(255, 160, 194, 0.18)",
-    iconSrc: "/images/assets/step3.png",
+    iconSrc: "/images/media/three.png",
     title: "View and rate products",
     description:
       "Access rated products in more detail. Compare as you seek different opinions from other women and make your own ratings.",
@@ -27,7 +27,7 @@ const servicesData = [
 const Services = () => {
   return (
     <>
-      <div className="title-style-one text-lg-start" data-aos="fade-right">
+      <div className="title-style-one text-lg-start bg_gradient" data-aos="fade-right">
         <h2 className="main-title fw-bold tx-dark text-center">
           How does it <span>work</span>?
         </h2>
@@ -43,11 +43,12 @@ const Services = () => {
           <div className="card-style-one position-relative mt-40 px-3 pe-5 sm-p0 flex-col-center">
             <div
               className="icon d-flex align-items-center justify-content-center"
-              style={{ backgroundColor: service.bgColor }}
             >
-              <img
+              <Image
                 src={service.iconSrc}
                 alt="icon"
+                height={55}
+                width={150}
                 className="lazy-img animate_jumpfour"
               />
             </div>

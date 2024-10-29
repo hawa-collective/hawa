@@ -45,10 +45,10 @@ export default function Location({ handleNext }) {
     <div className="fade-in-entry flex-col-center">
       <div className="height-15"></div>
       <Image
-        src="/images/media/location.webp"
+        src="/images/media/country.png"
         alt="location animated icon"
-        width={100}
-        height={100}
+        width={200}
+        height={200}
       />
       <span
         className="text-center survey-title mb-3 letter-spacing-5 font-jost p-1"
@@ -111,7 +111,7 @@ export default function Location({ handleNext }) {
         <button
           className="mt-3 tran3s button-primary ripple-btn fw-500"
           onClick={handleContinueClick}
-          style={{ backgroundColor: "#000000" }}
+          style={{ backgroundColor: "#8D447F" }}
           disabled={!selectedLocation} // Disable button if no location is selected
         >
           CONTINUE

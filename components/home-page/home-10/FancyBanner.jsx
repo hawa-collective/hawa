@@ -5,8 +5,8 @@ const FancyBanner = () => {
         <div className="row">
           <div className="col-xl-8 col-lg-10 m-auto text-center">
             <div className="title-style-one" data-aos="fade-up">
-              <h2 className="main-title fw-bold tx-dark m0 font_futurabook" style={{ textTransform: "uppercase" }}>
-                <span>Talk to us</span> & <br />give your feedback.
+              <h2 className="main-title fw-bold tx-dark m0" style={{ textTransform: "uppercase" }}>
+                <span>Talk to us</span><br /> & <br />give your feedback
               </h2>
             </div>{" "}
             {/* /.title-style-one */}

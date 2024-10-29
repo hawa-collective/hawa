@@ -58,10 +58,10 @@ export default function Age({ handleNext }) {
     <div className="fade-in-entry flex-col-center">
       <div className="height-15"></div>
       <Image
-        src="/images/media/age-img.svg"
+        src="/images/media/woman.png"
         alt="age icon"
-        width={100}
-        height={100}
+        width={200}
+        height={200}
       />
       <span
         className="text-center survey-title mb-3 letter-spacing-5 font-jost p-1"
@@ -89,13 +89,13 @@ export default function Age({ handleNext }) {
           helperText={error ? "Please enter your age" : ""}
         />
       </Box>
-      {age === "" || age < 16 ? (
-        <span className="mt-3 warn-text">You must be 16 years and older to continue.</span>
+      {age === "" ? (
+        <span className="mt-3 warn-text">Enter your age to continue.</span>
       ) : (
         <button
           className="mt-3 tran3s button-primary ripple-btn fw-500"
           onClick={handleContinueClick}
-          style={{ backgroundColor: "#000000" }}
+          style={{ backgroundColor: "#8D447F" }}
           disabled={!age}
         >
           CONTINUE
