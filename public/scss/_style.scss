@@ -347,16 +347,16 @@
 :root {
   --text-color: #48494e;
   --heading: #090f32;
-  --prime-one: #817fe2;
-  --prime-two: #817fe2;
+  --prime-one: #8d447f;
+  --prime-two: #8d447f;
   --prime-three: #6a45ff;
   --prime-four: #ffcd45;
   --prime-five: #007bff;
   --prime-six: #ffd338;
   --prime-seven: linear-gradient(-90deg, #ff7df2 0%, #ff275b 100%);
   --prime-eight: #ffed4e;
-  --prime-nine: #817fe2;
-  --prime-ten: #817fe2;
+  --prime-nine: #8d447f;
+  --prime-ten: #8d447f;
   --prime-eleven: #ffce4c;
   --prime-twelve: #ffe500;
   --prime-dark: #000000;
@@ -2159,6 +2159,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a692fd",endCo
   animation: jumpFive 5.5s infinite linear;
 }
 .hero-banner-one .shape-eight {
+  height: auto;
   left: 10%;
   bottom: -25px;
   z-index: 0;
@@ -2180,7 +2181,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a692fd",endCo
   text-align: center;
   left: 20px;
   top: 30px;
-  background: #817fe2;
+  background: #8d447f;
 }
 .hero-banner-one .card-one h6 {
   line-height: 1.35em;
@@ -2499,10 +2500,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a692fd",endCo
   // background-color: #fab6c7;
   background: rgb(206, 202, 255);
   background: rgb(250,182,199);
-background: -moz-linear-gradient(180deg, rgba(250,182,199,0.5) 0%, rgba(255,255,255,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(250,182,199,0.5) 0%, rgba(255,255,255,1) 100%);
-background: linear-gradient(180deg, rgba(250,182,199,0.5) 0%, rgba(255,255,255,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fab6c7",endColorstr="#ffffff",GradientType=1);
+  background: -moz-linear-gradient(180deg, rgba(166,146,253,0.5) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(166,146,253,0.5) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(180deg, rgba(166,146,253,0.5) 0%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a692fd",endColorstr="#ffffff",GradientType=1);
   z-index: 1;
 }
 .blog-section-one .shape-one {
@@ -2619,10 +2620,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fab6c7",endCo
   transition: all 0.3s ease-in-out;
 }
 .footer-style-one .shape-one {
-  width: 85px;
-  height: 85px;
-  background: #ff8c24;
-  border-radius: 15px;
+  width: auto;
   left: -2%;
   bottom: 10%;
   animation: rotated 35s infinite linear;

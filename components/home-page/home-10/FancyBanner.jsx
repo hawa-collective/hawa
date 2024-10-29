@@ -1,6 +1,6 @@
 const FancyBanner = () => {
   return (
-    <div className="wrapper position-relative mt-150">
+    <div className="wrapper position-relative mt-50">
       <div className="container">
         <div className="row">
           <div className="col-xl-8 col-lg-10 m-auto text-center">

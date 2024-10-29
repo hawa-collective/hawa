@@ -47,7 +47,7 @@ const Services = () => {
               <Image
                 src={service.iconSrc}
                 alt="icon"
-                height={55}
+                height={65}
                 width={150}
                 className="lazy-img animate_jumpfour"
               />

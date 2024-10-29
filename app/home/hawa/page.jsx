@@ -35,9 +35,10 @@ const HawaCollective = () => {
           <Hero />
           {/* /.container */}
           <img
-            src="/images/shape/shape_08.svg"
+            src="/images/media/allprods.png"
             alt="illustration"
-            className="lazy-img shapes shape-eight"
+            className="lazy-img shapes shape-eight hide-mobile"
+            style={{ width: "133px" }}
           />
         </div>
       </div>
@@ -174,15 +175,16 @@ const HawaCollective = () => {
 				Blog Section One
 			=====================================================
 			*/}
-      <div className="blog-section-one p-30 mt-180 lg-mt-120">
-        <div className="bg-wrapper pt-140 pb-170 lg-pt-100 lg-pb-100 position-relative">
-          <div className="shapes shape-one" />
+      <div className="blog-section-one p-30 mt-100 lg-mt-75">
+        <div className="bg-wrapper pt-70 pb-70 lg-pt-100 lg-pb-100 position-relative">
+          {/* <div className="shapes shape-one">
           <img
             src="/images/media/allprods.png"
             alt="icon"
             className="lazy-img shapes shape-two"
             style={{ height: "177px" }}
           />
+          </div>
           <div className="shapes shape-three">
             <img
               src="/images/media/heartsfill.png"
@@ -190,7 +192,7 @@ const HawaCollective = () => {
               className="lazy-img"
               style={{ height: "177px" }}
             />
-          </div>
+          </div> */}
 
           <div className="container">
             <div className="row align-items-center">
@@ -246,7 +248,6 @@ const HawaCollective = () => {
 			=====================================================
 			*/}
       <div className="footer-style-one theme-basic-footer position-relative">
-        <div className="shapes shape-one" />
         <div className="container">
           <div className="inner-wrapper">
             <Footer />

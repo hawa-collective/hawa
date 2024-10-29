@@ -50,24 +50,31 @@ const OurStory = () => {
                 <div className="sc-title-two fst-italic position-relative">
                   Our Mission.
                 </div>
-                <h2 className="main-title fw-500 tx-dark" style={{ letterSpacing: "0.09rem", fontSize: "37px" }}>
+                <h2
+                  className="main-title mobile_h2 fw-500 tx-dark"
+                  style={{ letterSpacing: "0.09rem", fontSize: "37px" }}
+                >
                   We are your one stop shop for reproductive health information.
                 </h2>
               </div>
             </div>
           </div>
-          <div className="row mt-100">
+          <div className="height_100"></div>
+          <div className="row">
             <div className="col-xl-8 col-lg-9 ms-auto">
               <div className="ps-xxl-5" data-aos="fade-left">
                 <h6 className="mb-30 font_futurabook">Our Story</h6>
-                <p className="text-lg tx-dark">
+                <h2
+                  className="main-title fw-500 tx-dark font_futurabook"
+                  style={{ fontSize: "24px" }}
+                >
                   Our goal is to educate on reproductive health and give a voice
                   to menstruators on the menstrual products that work for them.
                   We believe that having access to information on menstrual
                   health will help all individuals make informed decisions about
                   their health and the products they use, improving their
                   quality of life.
-                </p>
+                </h2>
                 <div className="row">
                   <Counter />
                 </div>
@@ -81,7 +88,7 @@ const OurStory = () => {
           src="/images/media/menses.png"
           alt="shape"
           className="lazy-img shapes shape-one"
-          style={{ height: "250px", }}
+          style={{ height: "250px" }}
         />
         <img
           src="/images/media/tamponlady.png"
@@ -150,7 +157,10 @@ const OurStory = () => {
                 </div> */}
               </div>
             </div>
-            <div className="col-lg-6 flex-row-center" style={{ minHeight: "260px" }}>
+            <div
+              className="col-lg-6 flex-row-center"
+              style={{ minHeight: "260px" }}
+            >
               <img
                 src="/images/media/allprods.png"
                 alt="shape"

@@ -17,7 +17,7 @@ const Illustration = () => {
         src="/images/assets/hero-9.jpg"
         alt="illustration"
         className="lazy-img main-illustration w-100"
-        styke={{ maxHeight: "350px" }}
+        style={{ maxHeight: "815px" }}
       />
       {shapes.map((shape, i) => (
         <img

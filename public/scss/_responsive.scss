@@ -49,11 +49,17 @@
   .fancy-feature-fiftyOne .shape-two {
     right: 26%;
   }
+  .height_100 {
+    height: 100px;
+  }
 }
 /*(min-width: 1400px)*/
 
 /*Grid xl Start*/
 @media (max-width: 1399px) {
+  .height_100 {
+    height: 100px;
+  }
   .fancy-feature-thirtyFive .img-holder .card-style {
     padding: 20px 0 15px;
   }
@@ -83,6 +89,9 @@
 
 /*Between Grid xl*/
 @media (min-width: 1200px) and (max-width: 1399px) {
+  .height_100 {
+    height: 100px;
+  }
   h1 {
     font-size: 65px;
   }
@@ -403,6 +412,9 @@
 /*(min-width: 1200px) and (max-width: 1399px)*/
 
 @media screen and (min-width: 1200px) {
+  .height_100 {
+    height: 100px;
+  }
   .theme-menu-eight .logo {
     min-width: 226px;
   }
@@ -428,6 +440,9 @@
 
 /*Grid lg Start*/
 @media (max-width: 1199px) {
+  .height_100 {
+    height: 100px;
+  }
   h4,
   .card-style-five h4 {
     font-size: 20px;
@@ -2927,6 +2942,12 @@
 
 /*Extra Small breakpoints*/
 @media (max-width: 575px) {
+  .mobile_h2 {
+    font-size: 28px !important;
+  }
+  .height_100 {
+    height: 25px;
+  }
   // Text styles
   .med_link_font {
     font-size: 24px;
@@ -3136,9 +3157,15 @@
   .text-intro {
     font-size: 18px;
   }
+  .form-padding {
+    padding: 0 !important;
+  }
 }
 /*(max-width: 575px)*/
 @media (max-width: 574px) {
+  .form-padding {
+    padding: 0 !important;
+  }
  // Questionnaire Width
 .questionnaire_width {
   min-width: 320px;

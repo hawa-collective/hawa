@@ -3,18 +3,18 @@ import Form from "./Form";
 
 const CallToActions = () => {
   return (
-    <div className="fancy-short-banner-one mt-170 lg-mt-120">
+    <div className="fancy-short-banner-one mt-120">
       <div className="container">
         <div className="bg-wrapper position-relative" data-aos="fade-up">
           <div className="shapes shape-one" />
-          <div className="shapes shape-one">
+          {/* <div className="shapes shape-one">
             <img
               src="/images/media/powerperiod.png"
               alt="icon"
               className="lazy-img"
               style={{ height: "100px" }}
             />
-          </div>
+          </div> */}
           <div className="inner-wrapper">
             <div className="subscribe-area">
               <div className="row align-items-end form-padding">
