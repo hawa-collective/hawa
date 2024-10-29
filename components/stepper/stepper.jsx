@@ -232,7 +232,7 @@ export default function HorizontalLinearStepper() {
         <>
           <div
             className="flex-col-center"
-            style={{ minHeight: "350px", minWidth: "325px" }}
+            style={{ minHeight: "350px", }}
           >
             <div>
               {stepStatus !== "introduction" ? (

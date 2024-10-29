@@ -30,7 +30,7 @@ export default function Introduction({ handleNext }) {
 
   return (
     <Card
-      className="fade-in-entry flex-col-center"
+      className="fade-in-entry flex-col-center padding_0"
       sx={{ maxWidth: 1080, boxShadow: "none", padding: "0" }}
     >
       <div className="mt-4">
